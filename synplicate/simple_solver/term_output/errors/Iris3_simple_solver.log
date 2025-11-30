@@ -1,0 +1,22 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/
+
+--- Return Code: 1 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing model and real samples. ---
+
+
+--- Standard Error (stderr) ---
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 259, in <module>
+    main()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 185, in main
+    samples = load_samples(sampler, sample_limit=args.max_samples)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 82, in load_samples
+    ensure_cache_loaded(sampler_module)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 78, in ensure_cache_loaded
+    load_func()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/sampler.py", line 52, in _load_or_initialize_cache
+    with open(_CACHE_FILENAME, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/Iris3/sampler_cache.pkl'

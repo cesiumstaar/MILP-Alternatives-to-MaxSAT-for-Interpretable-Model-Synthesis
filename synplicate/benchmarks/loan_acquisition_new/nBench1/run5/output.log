@@ -1,0 +1,188 @@
+2020-06-11 19:52:27.925995: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-06-11 19:52:27.926043: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-06-11 19:52:27.926067: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (supratik-laptop): /proc/driver/nvidia/version does not exist
+2020-06-11 19:52:27.926289: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-06-11 19:52:27.950019: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2400000000 Hz
+2020-06-11 19:52:27.950330: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f1870000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-06-11 19:52:27.950363: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+Sampling initial 20 samples ...
+----------------------
+age :  57 | monthly_income :  7223 | [[2.1444012e-04 9.9978560e-01]]
+1
+----------------------
+age :  25 | monthly_income :  2590 | [[0.41811395 0.58188605]]
+1
+----------------------
+age :  28 | monthly_income :  1954 | [[0.16123149 0.83876854]]
+1
+----------------------
+age :  76 | monthly_income :  7965 | [[6.076540e-07 9.999994e-01]]
+1
+----------------------
+age :  28 | monthly_income :  5457 | [[0.54389304 0.4561069 ]]
+0
+----------------------
+age :  28 | monthly_income :  1872 | [[0.15553688 0.8444631 ]]
+1
+----------------------
+age :  49 | monthly_income :  8824 | [[0.00682561 0.9931744 ]]
+1
+----------------------
+age :  67 | monthly_income :  4801 | [[2.2592897e-06 9.9999774e-01]]
+1
+----------------------
+age :  62 | monthly_income :  4012 | [[7.7648192e-06 9.9999225e-01]]
+1
+----------------------
+age :  57 | monthly_income :  3022 | [[2.4024837e-05 9.9997592e-01]]
+1
+----------------------
+age :  64 | monthly_income :  3647 | [[3.3240647e-06 9.9999666e-01]]
+1
+----------------------
+age :  34 | monthly_income :  9491 | [[0.57534945 0.42465058]]
+0
+----------------------
+age :  70 | monthly_income :  8680 | [[6.3550942e-06 9.9999368e-01]]
+1
+----------------------
+age :  61 | monthly_income :  2253 | [[4.314935e-06 9.999957e-01]]
+1
+----------------------
+age :  56 | monthly_income :  1437 | [[1.4619263e-05 9.9998534e-01]]
+1
+----------------------
+age :  74 | monthly_income :  8989 | [[2.0011928e-06 9.9999797e-01]]
+1
+----------------------
+age :  48 | monthly_income :  4339 | [[9.2175236e-04 9.9907827e-01]]
+1
+----------------------
+age :  68 | monthly_income :  4196 | [[1.1863563e-06 9.9999881e-01]]
+1
+----------------------
+age :  42 | monthly_income :  4495 | [[0.00715777 0.9928422 ]]
+1
+----------------------
+age :  62 | monthly_income :  8491 | [[8.010206e-05 9.999199e-01]]
+1
+----------------------
+Extracting synthesis configuration... 
+Synthesizing program with 1 states, features {'age': 4, 'monthly_income': 2}, and labels {'approved': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   10 max variables
+|---Extracting counting variables...
+   38 ind variables
+Maximum model counting...
+Witness found! Count:  1.125x2^4
+Extracting program from witness...
+(0,3) -> approved_1
+(0,2) -> approved_1
+(0,1) -> approved_1
+(0,0) -> approved_1
+0: age
+Synthesized program: examples/loan_acquisition/program/
+Visualization: examples/loan_acquisition/program/program0.dot
+Synthesis time:1.2114806880708784
+Evaluating program against model...
+Current true positives:18, and false negatives: 2
+Neighbor true positives:168, and false negatives: 12
+Current distance: 0.09999999999999998
+Neighbor distance: 0.06666666666666665
+0.033333333333333326
+Refining sample set...
+Evaluation time:6.839305717032403
+Size of sample set: 36
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 1 states, features {'age': 4, 'monthly_income': 2}, and labels {'approved': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   10 max variables
+|---Extracting counting variables...
+   45 ind variables
+Maximum model counting...
+Witness found! Count:  1.0625x2^5
+Extracting program from witness...
+(0,3) -> approved_1
+(0,2) -> approved_1
+(0,1) -> approved_1
+(0,0) -> approved_1
+0: age
+Synthesized program: examples/loan_acquisition/program/
+Visualization: examples/loan_acquisition/program/program1.dot
+Synthesis time:1.6179766149725765
+Evaluating program against model...
+Current true positives:34, and false negatives: 2
+Neighbor true positives:195, and false negatives: 17
+Current distance: 0.05555555555555558
+Neighbor distance: 0.08018867924528306
+0.024633123689727476
+Refining sample set...
+Evaluation time:12.099329635035247
+Size of sample set: 52
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 1 states, features {'age': 4, 'monthly_income': 2}, and labels {'approved': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   10 max variables
+|---Extracting counting variables...
+   53 ind variables
+Maximum model counting...
+Witness found! Count:  1.5625x2^5
+Extracting program from witness...
+(0,3) -> approved_1
+(0,2) -> approved_1
+(0,1) -> approved_1
+(0,0) -> approved_1
+0: age
+Synthesized program: examples/loan_acquisition/program/
+Visualization: examples/loan_acquisition/program/program2.dot
+Synthesis time:3.012743068160489
+Evaluating program against model...
+Current true positives:50, and false negatives: 2
+Neighbor true positives:227, and false negatives: 17
+Current distance: 0.038461538461538436
+Neighbor distance: 0.069672131147541
+0.03121059268600257
+Refining sample set...
+Evaluation time:17.80989495990798
+Size of sample set: 68
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 1 states, features {'age': 4, 'monthly_income': 2}, and labels {'approved': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   10 max variables
+|---Extracting counting variables...
+   57 ind variables
+Maximum model counting...
+Witness found! Count:  1.90625x2^5
+Extracting program from witness...
+(0,3) -> approved_1
+(0,2) -> approved_1
+(0,1) -> approved_1
+(0,0) -> approved_1
+0: age
+Synthesized program: examples/loan_acquisition/program/
+Visualization: examples/loan_acquisition/program/program3.dot
+Synthesis time:3.9661890680436045
+Evaluating program against model...
+Current true positives:61, and false negatives: 7
+Neighbor true positives:250, and false negatives: 26
+Current distance: 0.1029411764705882
+Neighbor distance: 0.09420289855072461
+0.00873827791986359
+Evaluation time:20.785953102866188
+Size of sample set: 68
+--------------------------------------------------
+================================================
+Synthesis complete after 4 iterations!
+Time: 67.34287285408936

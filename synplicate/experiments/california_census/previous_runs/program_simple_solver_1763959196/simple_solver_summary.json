@@ -1,0 +1,13 @@
+{
+  "feature": "population",
+  "accuracy": 0.85,
+  "explainability": 1.0,
+  "correct": 85,
+  "samples": 100,
+  "cost": 14.999999999999991,
+  "correctnessReward": 85,
+  "explainibilityReward": 100,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/california_census/program/program_simple_population.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/california_census/program/program_simple_population.dot",
+  "png": "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/california_census_program_simple_population_1763959195.png"
+}

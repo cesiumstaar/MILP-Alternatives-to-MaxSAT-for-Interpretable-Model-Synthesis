@@ -1,0 +1,115 @@
+BC1.1
+phi_Gamma_val := 
+F|
+( T & age_P6700 & monthly_income_P824100 & approved_P100)|
+( T & age_P5000 & monthly_income_P798100 & approved_P100)|
+( T & age_P6600 & monthly_income_P272600 & approved_P100)|
+( T & age_P3800 & monthly_income_P903600 & approved_P100)|
+( T & age_P6800 & monthly_income_P737100 & approved_P100)|
+( T & age_P5000 & monthly_income_P637200 & approved_P100)|
+( T & age_P3300 & monthly_income_P599100 & approved_P100)|
+( T & age_P7300 & monthly_income_P875200 & approved_P100)|
+( T & age_P7400 & monthly_income_P825000 & approved_P100)|
+( T & age_P5600 & monthly_income_P987700 & approved_P100)|
+( T & age_P3600 & monthly_income_P999300 & approved_P100)|
+( T & age_P3400 & monthly_income_P611500 & approved_P100)|
+( T & age_P5200 & monthly_income_P770400 & approved_P100)|
+( T & age_P6500 & monthly_income_P739300 & approved_P100)|
+( T & age_P7200 & monthly_income_P108800 & approved_P100)|
+( T & age_P6700 & monthly_income_P949900 & approved_P100)|
+( T & age_P4400 & monthly_income_P200900 & approved_P100)|
+( T & age_P3300 & monthly_income_P950800 & approved_P0)|
+( T & age_P3200 & monthly_income_P822600 & approved_P0)|
+( T & age_P5500 & monthly_income_P594800 & approved_P100);
+
+phi_Gamma_det := 
+T &
+(T & (age_P6700 => (T & !age_P5000 & !age_P6600 & !age_P3800 & !age_P6800 & !age_P3300 & !age_P7300 & !age_P7400 & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P5000 => (T & !age_P6600 & !age_P3800 & !age_P6800 & !age_P3300 & !age_P7300 & !age_P7400 & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P6600 => (T & !age_P3800 & !age_P6800 & !age_P3300 & !age_P7300 & !age_P7400 & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P3800 => (T & !age_P6800 & !age_P3300 & !age_P7300 & !age_P7400 & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P6800 => (T & !age_P3300 & !age_P7300 & !age_P7400 & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P3300 => (T & !age_P7300 & !age_P7400 & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P7300 => (T & !age_P7400 & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P7400 => (T & !age_P5600 & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P5600 => (T & !age_P3600 & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P3600 => (T & !age_P3400 & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P3400 => (T & !age_P5200 & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P5200 => (T & !age_P6500 & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P6500 => (T & !age_P7200 & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P7200 => (T & !age_P4400 & !age_P3200 & !age_P5500)) & (age_P4400 => (T & !age_P3200 & !age_P5500)) & (age_P3200 => (T & !age_P5500)) & (age_P5500 => (T))) &
+(T & (monthly_income_P824100 => (T & !monthly_income_P798100 & !monthly_income_P272600 & !monthly_income_P903600 & !monthly_income_P737100 & !monthly_income_P637200 & !monthly_income_P599100 & !monthly_income_P875200 & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P798100 => (T & !monthly_income_P272600 & !monthly_income_P903600 & !monthly_income_P737100 & !monthly_income_P637200 & !monthly_income_P599100 & !monthly_income_P875200 & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P272600 => (T & !monthly_income_P903600 & !monthly_income_P737100 & !monthly_income_P637200 & !monthly_income_P599100 & !monthly_income_P875200 & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P903600 => (T & !monthly_income_P737100 & !monthly_income_P637200 & !monthly_income_P599100 & !monthly_income_P875200 & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P737100 => (T & !monthly_income_P637200 & !monthly_income_P599100 & !monthly_income_P875200 & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P637200 => (T & !monthly_income_P599100 & !monthly_income_P875200 & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P599100 => (T & !monthly_income_P875200 & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P875200 => (T & !monthly_income_P825000 & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P825000 => (T & !monthly_income_P987700 & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P987700 => (T & !monthly_income_P999300 & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P999300 => (T & !monthly_income_P611500 & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P611500 => (T & !monthly_income_P770400 & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P770400 => (T & !monthly_income_P739300 & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P739300 => (T & !monthly_income_P108800 & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P108800 => (T & !monthly_income_P949900 & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P949900 => (T & !monthly_income_P200900 & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P200900 => (T & !monthly_income_P950800 & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P950800 => (T & !monthly_income_P822600 & !monthly_income_P594800)) & (monthly_income_P822600 => (T & !monthly_income_P594800)) & (monthly_income_P594800 => (T))) &
+(T & (approved_P100 => (T & !approved_P0)) & (approved_P0 => (T)));
+
+phi_Gamma :=  phi_Gamma_val & phi_Gamma_det;
+
+phi_T_feature_det :=
+T &
+(F | (lam_0_age & !lam_0_monthly_income) | (lam_0_monthly_income & !lam_0_age)) &
+(F | (lam_1_age & !lam_1_monthly_income) | (lam_1_monthly_income & !lam_1_age)) &
+(F | (lam_2_age & !lam_2_monthly_income) | (lam_2_monthly_income & !lam_2_age));
+
+phi_T_transitions := 
+T & 
+(lam_0_age =>
+          (T &
+          (F | (tau_0_0_1 &(T & !tau_0_0_2 & !tau_0_0_approved_0 & !tau_0_0_approved_1)) | (tau_0_0_2 &(T & !tau_0_0_1 & !tau_0_0_approved_0 & !tau_0_0_approved_1)) | (T & (F | (tau_0_0_approved_0 & (T & !tau_0_0_approved_1 & !tau_0_0_1 & !tau_0_0_2)) | (tau_0_0_approved_1 & (T & !tau_0_0_approved_0 & !tau_0_0_1 & !tau_0_0_2))))) &
+          (F | (tau_0_1_1 &(T & !tau_0_1_2 & !tau_0_1_approved_0 & !tau_0_1_approved_1)) | (tau_0_1_2 &(T & !tau_0_1_1 & !tau_0_1_approved_0 & !tau_0_1_approved_1)) | (T & (F | (tau_0_1_approved_0 & (T & !tau_0_1_approved_1 & !tau_0_1_1 & !tau_0_1_2)) | (tau_0_1_approved_1 & (T & !tau_0_1_approved_0 & !tau_0_1_1 & !tau_0_1_2))))) &
+          (F | (tau_0_2_1 &(T & !tau_0_2_2 & !tau_0_2_approved_0 & !tau_0_2_approved_1)) | (tau_0_2_2 &(T & !tau_0_2_1 & !tau_0_2_approved_0 & !tau_0_2_approved_1)) | (T & (F | (tau_0_2_approved_0 & (T & !tau_0_2_approved_1 & !tau_0_2_1 & !tau_0_2_2)) | (tau_0_2_approved_1 & (T & !tau_0_2_approved_0 & !tau_0_2_1 & !tau_0_2_2))))) &
+          (F | (tau_0_3_1 &(T & !tau_0_3_2 & !tau_0_3_approved_0 & !tau_0_3_approved_1)) | (tau_0_3_2 &(T & !tau_0_3_1 & !tau_0_3_approved_0 & !tau_0_3_approved_1)) | (T & (F | (tau_0_3_approved_0 & (T & !tau_0_3_approved_1 & !tau_0_3_1 & !tau_0_3_2)) | (tau_0_3_approved_1 & (T & !tau_0_3_approved_0 & !tau_0_3_1 & !tau_0_3_2))))))) & 
+(lam_0_monthly_income =>
+          (T &
+          (F | (tau_0_0_1 &(T & !tau_0_0_2 & !tau_0_0_approved_0 & !tau_0_0_approved_1)) | (tau_0_0_2 &(T & !tau_0_0_1 & !tau_0_0_approved_0 & !tau_0_0_approved_1)) | (T & (F | (tau_0_0_approved_0 & (T & !tau_0_0_approved_1 & !tau_0_0_1 & !tau_0_0_2)) | (tau_0_0_approved_1 & (T & !tau_0_0_approved_0 & !tau_0_0_1 & !tau_0_0_2))))) &
+          (F | (tau_0_1_1 &(T & !tau_0_1_2 & !tau_0_1_approved_0 & !tau_0_1_approved_1)) | (tau_0_1_2 &(T & !tau_0_1_1 & !tau_0_1_approved_0 & !tau_0_1_approved_1)) | (T & (F | (tau_0_1_approved_0 & (T & !tau_0_1_approved_1 & !tau_0_1_1 & !tau_0_1_2)) | (tau_0_1_approved_1 & (T & !tau_0_1_approved_0 & !tau_0_1_1 & !tau_0_1_2))))))) & 
+(lam_1_age =>
+          (T &
+          (F | (tau_1_0_2 &(T & !tau_1_0_approved_0 & !tau_1_0_approved_1)) | (T & (F | (tau_1_0_approved_0 & (T & !tau_1_0_approved_1 & !tau_1_0_2)) | (tau_1_0_approved_1 & (T & !tau_1_0_approved_0 & !tau_1_0_2))))) &
+          (F | (tau_1_1_2 &(T & !tau_1_1_approved_0 & !tau_1_1_approved_1)) | (T & (F | (tau_1_1_approved_0 & (T & !tau_1_1_approved_1 & !tau_1_1_2)) | (tau_1_1_approved_1 & (T & !tau_1_1_approved_0 & !tau_1_1_2))))) &
+          (F | (tau_1_2_2 &(T & !tau_1_2_approved_0 & !tau_1_2_approved_1)) | (T & (F | (tau_1_2_approved_0 & (T & !tau_1_2_approved_1 & !tau_1_2_2)) | (tau_1_2_approved_1 & (T & !tau_1_2_approved_0 & !tau_1_2_2))))) &
+          (F | (tau_1_3_2 &(T & !tau_1_3_approved_0 & !tau_1_3_approved_1)) | (T & (F | (tau_1_3_approved_0 & (T & !tau_1_3_approved_1 & !tau_1_3_2)) | (tau_1_3_approved_1 & (T & !tau_1_3_approved_0 & !tau_1_3_2))))))) & 
+(lam_1_monthly_income =>
+          (T &
+          (F | (tau_1_0_2 &(T & !tau_1_0_approved_0 & !tau_1_0_approved_1)) | (T & (F | (tau_1_0_approved_0 & (T & !tau_1_0_approved_1 & !tau_1_0_2)) | (tau_1_0_approved_1 & (T & !tau_1_0_approved_0 & !tau_1_0_2))))) &
+          (F | (tau_1_1_2 &(T & !tau_1_1_approved_0 & !tau_1_1_approved_1)) | (T & (F | (tau_1_1_approved_0 & (T & !tau_1_1_approved_1 & !tau_1_1_2)) | (tau_1_1_approved_1 & (T & !tau_1_1_approved_0 & !tau_1_1_2))))))) & 
+(lam_2_age =>
+          (T &
+          (F | (T & (F | (tau_2_0_approved_0 & (T & !tau_2_0_approved_1)) | (tau_2_0_approved_1 & (T & !tau_2_0_approved_0))))) &
+          (F | (T & (F | (tau_2_1_approved_0 & (T & !tau_2_1_approved_1)) | (tau_2_1_approved_1 & (T & !tau_2_1_approved_0))))) &
+          (F | (T & (F | (tau_2_2_approved_0 & (T & !tau_2_2_approved_1)) | (tau_2_2_approved_1 & (T & !tau_2_2_approved_0))))) &
+          (F | (T & (F | (tau_2_3_approved_0 & (T & !tau_2_3_approved_1)) | (tau_2_3_approved_1 & (T & !tau_2_3_approved_0))))))) & 
+(lam_2_monthly_income =>
+          (T &
+          (F | (T & (F | (tau_2_0_approved_0 & (T & !tau_2_0_approved_1)) | (tau_2_0_approved_1 & (T & !tau_2_0_approved_0))))) &
+          (F | (T & (F | (tau_2_1_approved_0 & (T & !tau_2_1_approved_1)) | (tau_2_1_approved_1 & (T & !tau_2_1_approved_0)))))));
+
+phi_T_transitions_consistency :=
+T &
+(lam_0_age => (T)) &
+(lam_0_monthly_income => (T & !tau_0_2_1 & !tau_0_2_2 & !tau_0_2_approved_0 & !tau_0_2_approved_1 & !tau_0_3_1 & !tau_0_3_2 & !tau_0_3_approved_0 & !tau_0_3_approved_1)) &
+(lam_1_age => (T)) &
+(lam_1_monthly_income => (T & !tau_1_2_2 & !tau_1_2_approved_0 & !tau_1_2_approved_1 & !tau_1_3_2 & !tau_1_3_approved_0 & !tau_1_3_approved_1)) &
+(lam_2_age => (T)) &
+(lam_2_monthly_income => (T & !tau_2_2_approved_0 & !tau_2_2_approved_1 & !tau_2_3_approved_0 & !tau_2_3_approved_1));
+
+phi_T := phi_T_feature_det & phi_T_transitions & phi_T_transitions_consistency;
+
+phi_sim_leaves :=
+T &
+(pi_approved_0 == (F | (T & approved_P0) | (T & approved_P0))) &
+(pi_approved_1 == (F | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100) | (T & approved_P100)));
+
+phi_sim_transition :=
+T &
+(pi_0 == (F | 
+         (lam_0_age & (F) & (T & (tau_0_0_1 => pi_1) & (tau_0_0_2 => pi_2) & (tau_0_0_approved_0 => pi_approved_0) & (tau_0_0_approved_1 => pi_approved_1))) | 
+         (lam_0_age & (F | (T & age_P3800 & monthly_income_P903600) | (T & age_P3300 & monthly_income_P599100) | (T & age_P3600 & monthly_income_P999300) | (T & age_P3400 & monthly_income_P611500) | (T & age_P4400 & monthly_income_P200900) | (T & age_P3300 & monthly_income_P950800) | (T & age_P3200 & monthly_income_P822600)) & (T & (tau_0_1_1 => pi_1) & (tau_0_1_2 => pi_2) & (tau_0_1_approved_0 => pi_approved_0) & (tau_0_1_approved_1 => pi_approved_1))) | 
+         (lam_0_age & (F | (T & age_P5000 & monthly_income_P798100) | (T & age_P5000 & monthly_income_P637200) | (T & age_P5600 & monthly_income_P987700) | (T & age_P5200 & monthly_income_P770400) | (T & age_P5500 & monthly_income_P594800)) & (T & (tau_0_2_1 => pi_1) & (tau_0_2_2 => pi_2) & (tau_0_2_approved_0 => pi_approved_0) & (tau_0_2_approved_1 => pi_approved_1))) | 
+         (lam_0_age & (F | (T & age_P6700 & monthly_income_P824100) | (T & age_P6600 & monthly_income_P272600) | (T & age_P6800 & monthly_income_P737100) | (T & age_P7300 & monthly_income_P875200) | (T & age_P7400 & monthly_income_P825000) | (T & age_P6500 & monthly_income_P739300) | (T & age_P7200 & monthly_income_P108800) | (T & age_P6700 & monthly_income_P949900)) & (T & (tau_0_3_1 => pi_1) & (tau_0_3_2 => pi_2) & (tau_0_3_approved_0 => pi_approved_0) & (tau_0_3_approved_1 => pi_approved_1))) | 
+         (lam_0_monthly_income & (F | (T & age_P6600 & monthly_income_P272600) | (T & age_P3300 & monthly_income_P599100) | (T & age_P7200 & monthly_income_P108800) | (T & age_P4400 & monthly_income_P200900) | (T & age_P5500 & monthly_income_P594800)) & (T & (tau_0_0_1 => pi_1) & (tau_0_0_2 => pi_2) & (tau_0_0_approved_0 => pi_approved_0) & (tau_0_0_approved_1 => pi_approved_1))) | 
+         (lam_0_monthly_income & (F | (T & age_P6700 & monthly_income_P824100) | (T & age_P5000 & monthly_income_P798100) | (T & age_P3800 & monthly_income_P903600) | (T & age_P6800 & monthly_income_P737100) | (T & age_P5000 & monthly_income_P637200) | (T & age_P7300 & monthly_income_P875200) | (T & age_P7400 & monthly_income_P825000) | (T & age_P5600 & monthly_income_P987700) | (T & age_P3600 & monthly_income_P999300) | (T & age_P3400 & monthly_income_P611500) | (T & age_P5200 & monthly_income_P770400) | (T & age_P6500 & monthly_income_P739300) | (T & age_P6700 & monthly_income_P949900) | (T & age_P3300 & monthly_income_P950800) | (T & age_P3200 & monthly_income_P822600)) & (T & (tau_0_1_1 => pi_1) & (tau_0_1_2 => pi_2) & (tau_0_1_approved_0 => pi_approved_0) & (tau_0_1_approved_1 => pi_approved_1))))) &
+(pi_1 == (F | 
+         (lam_1_age & (F) & (T & (tau_1_0_2 => pi_2) & (tau_1_0_approved_0 => pi_approved_0) & (tau_1_0_approved_1 => pi_approved_1))) | 
+         (lam_1_age & (F | (T & age_P3800 & monthly_income_P903600) | (T & age_P3300 & monthly_income_P599100) | (T & age_P3600 & monthly_income_P999300) | (T & age_P3400 & monthly_income_P611500) | (T & age_P4400 & monthly_income_P200900) | (T & age_P3300 & monthly_income_P950800) | (T & age_P3200 & monthly_income_P822600)) & (T & (tau_1_1_2 => pi_2) & (tau_1_1_approved_0 => pi_approved_0) & (tau_1_1_approved_1 => pi_approved_1))) | 
+         (lam_1_age & (F | (T & age_P5000 & monthly_income_P798100) | (T & age_P5000 & monthly_income_P637200) | (T & age_P5600 & monthly_income_P987700) | (T & age_P5200 & monthly_income_P770400) | (T & age_P5500 & monthly_income_P594800)) & (T & (tau_1_2_2 => pi_2) & (tau_1_2_approved_0 => pi_approved_0) & (tau_1_2_approved_1 => pi_approved_1))) | 
+         (lam_1_age & (F | (T & age_P6700 & monthly_income_P824100) | (T & age_P6600 & monthly_income_P272600) | (T & age_P6800 & monthly_income_P737100) | (T & age_P7300 & monthly_income_P875200) | (T & age_P7400 & monthly_income_P825000) | (T & age_P6500 & monthly_income_P739300) | (T & age_P7200 & monthly_income_P108800) | (T & age_P6700 & monthly_income_P949900)) & (T & (tau_1_3_2 => pi_2) & (tau_1_3_approved_0 => pi_approved_0) & (tau_1_3_approved_1 => pi_approved_1))) | 
+         (lam_1_monthly_income & (F | (T & age_P6600 & monthly_income_P272600) | (T & age_P3300 & monthly_income_P599100) | (T & age_P7200 & monthly_income_P108800) | (T & age_P4400 & monthly_income_P200900) | (T & age_P5500 & monthly_income_P594800)) & (T & (tau_1_0_2 => pi_2) & (tau_1_0_approved_0 => pi_approved_0) & (tau_1_0_approved_1 => pi_approved_1))) | 
+         (lam_1_monthly_income & (F | (T & age_P6700 & monthly_income_P824100) | (T & age_P5000 & monthly_income_P798100) | (T & age_P3800 & monthly_income_P903600) | (T & age_P6800 & monthly_income_P737100) | (T & age_P5000 & monthly_income_P637200) | (T & age_P7300 & monthly_income_P875200) | (T & age_P7400 & monthly_income_P825000) | (T & age_P5600 & monthly_income_P987700) | (T & age_P3600 & monthly_income_P999300) | (T & age_P3400 & monthly_income_P611500) | (T & age_P5200 & monthly_income_P770400) | (T & age_P6500 & monthly_income_P739300) | (T & age_P6700 & monthly_income_P949900) | (T & age_P3300 & monthly_income_P950800) | (T & age_P3200 & monthly_income_P822600)) & (T & (tau_1_1_2 => pi_2) & (tau_1_1_approved_0 => pi_approved_0) & (tau_1_1_approved_1 => pi_approved_1))))) &
+(pi_2 == (F | 
+         (lam_2_age & (F) & (T & (tau_2_0_approved_0 => pi_approved_0) & (tau_2_0_approved_1 => pi_approved_1))) | 
+         (lam_2_age & (F | (T & age_P3800 & monthly_income_P903600) | (T & age_P3300 & monthly_income_P599100) | (T & age_P3600 & monthly_income_P999300) | (T & age_P3400 & monthly_income_P611500) | (T & age_P4400 & monthly_income_P200900) | (T & age_P3300 & monthly_income_P950800) | (T & age_P3200 & monthly_income_P822600)) & (T & (tau_2_1_approved_0 => pi_approved_0) & (tau_2_1_approved_1 => pi_approved_1))) | 
+         (lam_2_age & (F | (T & age_P5000 & monthly_income_P798100) | (T & age_P5000 & monthly_income_P637200) | (T & age_P5600 & monthly_income_P987700) | (T & age_P5200 & monthly_income_P770400) | (T & age_P5500 & monthly_income_P594800)) & (T & (tau_2_2_approved_0 => pi_approved_0) & (tau_2_2_approved_1 => pi_approved_1))) | 
+         (lam_2_age & (F | (T & age_P6700 & monthly_income_P824100) | (T & age_P6600 & monthly_income_P272600) | (T & age_P6800 & monthly_income_P737100) | (T & age_P7300 & monthly_income_P875200) | (T & age_P7400 & monthly_income_P825000) | (T & age_P6500 & monthly_income_P739300) | (T & age_P7200 & monthly_income_P108800) | (T & age_P6700 & monthly_income_P949900)) & (T & (tau_2_3_approved_0 => pi_approved_0) & (tau_2_3_approved_1 => pi_approved_1))) | 
+         (lam_2_monthly_income & (F | (T & age_P6600 & monthly_income_P272600) | (T & age_P3300 & monthly_income_P599100) | (T & age_P7200 & monthly_income_P108800) | (T & age_P4400 & monthly_income_P200900) | (T & age_P5500 & monthly_income_P594800)) & (T & (tau_2_0_approved_0 => pi_approved_0) & (tau_2_0_approved_1 => pi_approved_1))) | 
+         (lam_2_monthly_income & (F | (T & age_P6700 & monthly_income_P824100) | (T & age_P5000 & monthly_income_P798100) | (T & age_P3800 & monthly_income_P903600) | (T & age_P6800 & monthly_income_P737100) | (T & age_P5000 & monthly_income_P637200) | (T & age_P7300 & monthly_income_P875200) | (T & age_P7400 & monthly_income_P825000) | (T & age_P5600 & monthly_income_P987700) | (T & age_P3600 & monthly_income_P999300) | (T & age_P3400 & monthly_income_P611500) | (T & age_P5200 & monthly_income_P770400) | (T & age_P6500 & monthly_income_P739300) | (T & age_P6700 & monthly_income_P949900) | (T & age_P3300 & monthly_income_P950800) | (T & age_P3200 & monthly_income_P822600)) & (T & (tau_2_1_approved_0 => pi_approved_0) & (tau_2_1_approved_1 => pi_approved_1)))));
+
+phi_sim := pi_0 & phi_sim_leaves & phi_sim_transition;
+
+FORMULA := phi_Gamma & phi_T & phi_sim;
+ASSIGN FORMULA;

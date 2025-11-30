@@ -1,0 +1,13 @@
+{
+  "feature": "age",
+  "accuracy": 0.745827498770011,
+  "explainability": 1.0,
+  "correct": 19707,
+  "samples": 26423,
+  "cost": 6716.000000000003,
+  "correctnessReward": 19707,
+  "explainibilityReward": 26423,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/program/program_simple_age.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/program/program_simple_age.dot",
+  "png": null
+}

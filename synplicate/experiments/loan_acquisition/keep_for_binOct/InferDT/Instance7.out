@@ -1,0 +1,25 @@
+Try with k=1
+Try with k=2
+Try with k=3
+
+
+
+===== RESULT =====
+Depth: 3
+Number of nodes: 15
+Accuracy: 98.1818 %
+monthly_income>5384.09
+| monthly_income>8774.31
+| | age>35: 1
+| | !age>35: 0
+| !monthly_income>8774.31
+| | age>32: 1
+| | !age>32: 0
+!monthly_income>5384.09
+| monthly_income>1999.34
+| | age>26: 1
+| | !age>26: 0
+| !monthly_income>1999.34
+| | age>22: 1
+| | !age>22: 0
+

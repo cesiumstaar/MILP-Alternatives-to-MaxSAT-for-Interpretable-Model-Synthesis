@@ -1,0 +1,8 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="monthly_income <= 8611.5\ngini = 0.18\nsamples = 10\nvalue = [1, 9]\nclass = Yes"] ;
+1 [label="gini = 0.0\nsamples = 9\nvalue = [0, 9]\nclass = Yes"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = No"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

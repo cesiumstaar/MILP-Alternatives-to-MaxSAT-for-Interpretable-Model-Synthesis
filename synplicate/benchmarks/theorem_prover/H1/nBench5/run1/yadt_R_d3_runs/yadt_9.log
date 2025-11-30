@@ -1,0 +1,14 @@
+YaDT version 2.2.0 (c) S. Ruggieri 2002-2019
+Reading text data
+ + atts: 2 class: 1 weight: 0 rows: 164
+ + load time: 0.003692 secs (0.69 MiB/s, 44.42 K rows/s)
+ + indexing ... done
+ + total time: 0.003908 secs (0.65 MiB/s, 41.96 K rows/s)
+Building 1 tree(s) on 164 cases
+ + tree(s) built
+ + size: 7 depth: 3 nf: 2 time: 0.00716 secs
+Pruning tree using training set
+ + tree pruned
+ + size: 7 depth: 3 nf: 2 time: 3.1e-05 secs
+Testing data
+ + rows: 550 time: 0.000363 secs (1515.15 K rows/s)

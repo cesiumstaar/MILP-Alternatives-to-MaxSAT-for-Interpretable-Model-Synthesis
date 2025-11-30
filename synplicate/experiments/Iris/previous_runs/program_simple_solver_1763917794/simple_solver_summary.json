@@ -1,0 +1,13 @@
+{
+  "feature": "petal_length",
+  "accuracy": 0.729536218796362,
+  "explainability": 1.0,
+  "correct": 22620,
+  "samples": 31006,
+  "cost": 8386.000000000004,
+  "correctnessReward": 22620,
+  "explainibilityReward": 31006,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_length.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_length.dot",
+  "png": "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/Iris_program_simple_petal_length_1763917794.png"
+}

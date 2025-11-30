@@ -1,0 +1,13 @@
+{
+  "feature": "monthly_income",
+  "accuracy": 0.87,
+  "explainability": 1.0,
+  "correct": 87,
+  "samples": 100,
+  "cost": 12.99999999999999,
+  "correctnessReward": 87,
+  "explainibilityReward": 100,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/loan_acquisition/program/program_simple_monthly_income.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/loan_acquisition/program/program_simple_monthly_income.dot",
+  "png": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/loan_acquisition/program/program_simple_monthly_income.png"
+}

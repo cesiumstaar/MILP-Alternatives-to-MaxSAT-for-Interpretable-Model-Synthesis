@@ -1,0 +1,9 @@
+--- Command ---
+python3 synplicate.py experiments/Adult3/ --solver=milp_solver_extended_formulation
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+
+
+--- Standard Error (stderr) ---

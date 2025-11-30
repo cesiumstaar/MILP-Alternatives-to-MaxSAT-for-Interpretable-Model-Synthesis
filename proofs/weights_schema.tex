@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\title{Weight Assignment and MaxSAT Schema}
+\author{Auto-generated}
+\begin{document}
+\maketitle
+
+\section{Soft-Clause Weighting}
+The MaxSAT encoding draws its soft literals from three syntactic families:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Reachable predicate choices.} For each template node $i$ and feature $f$, a literal $\texttt{lamp}_{i,f}$ is created with a base weight taken from the user-supplied feature prior $w_f$. All such literals are normalised by the estimated maximum explanation score $\hat{w}=\max\{1, n + n\cdot w_{\max}\}$, where $n$ is the number of feature nodes and $w_{\max}$ the largest feature prior. The normalised weight becomes $\max(1,\lfloor w_f/\hat{w}\cdot |\mathcal{S}|\rfloor)$ with $|\mathcal{S}|$ the number of samples.
+    \item \textbf{Node-usage penalties.} Each template node $i$ receives a soft literal $\lnot\texttt{used\_node}_i$ with weight $\max(1,\lfloor (w_{\max}+1)/\hat{w}\cdot |\mathcal{S}|\rfloor)$ so that employing additional nodes is discouraged relative to feature priors.
+    \item \textbf{Sample-correctness literals.} Every correctness matcher literal $\texttt{match\_0}_{s}$ (one per sample) is treated as soft with weight equal to the maximum explainability weight, ensuring that misclassifying any example is never cheaper than dropping the heaviest explanation literal.
+\end{itemize}
+The full weight map is derived in \texttt{compute\_normalizied\_weights} and consumed by \texttt{extract\_soft\_variables}, which partitions soft literals into explainability and correctness buckets.
+
+\section{Hard-Clause Budget}
+All structural constraints are translated from the Boolean circuit into CNF and marked as hard. The hard weight is fixed to $1+\sum_{(l,w)\in\mathcal{W}}w$, where $\mathcal{W}$ is the multiset of soft literal weights. This guarantees that violating any hard clause is strictly worse than simultaneously violating every soft clause.
+
+\section{MaxSAT Objective}
+The final WCNF instance contains:
+\begin{itemize}[leftmargin=*]
+    \item Hard clauses encoding $\Phi_E$ (diagram template), $\Phi_{\text{sim}}$ (sample-to-path consistency), $\Phi_{\text{expl}}$ (reachability and activated predicates), $\Phi_{\text{non-repeat}}$ (no duplicate predicates on reachable paths), and $\Phi_{\text{region}}$ (binary adders and optional bounds over explanation weights).
+    \item Soft unit clauses for every element of the explainability and correctness buckets described above.
+\end{itemize}
+Solving minimises the sum of weights of \emph{unsatisfied} soft clauses. The reported correctness reward $\texttt{corR}$ simply counts satisfied correctness literals (ignoring their weights), whereas the explainability reward $\texttt{expR}$ sums the weights of satisfied explainability literals. Consequently, $\texttt{corR}+\texttt{expR}$ reflects satisfied soft clauses, while the solver cost reflects violated ones, so the two values need not add up.
+
+\end{document}

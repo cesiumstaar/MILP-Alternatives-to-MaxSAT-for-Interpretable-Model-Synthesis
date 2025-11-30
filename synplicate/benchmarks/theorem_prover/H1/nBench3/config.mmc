@@ -1,0 +1,5 @@
+size = 2
+features = F1:float:4, F10:float:3
+labels = H1:2
+extend = False
+feature_defs = feature_defs

@@ -1,0 +1,9 @@
+digraph {
+node [label=init_pos,shape="diamond",style=""] 0
+node [label=alert_1.0,style=""] alert_1.0
+0 -> alert_1.0 [label="3"]
+node [label=alert_0.0,style=""] alert_0.0
+0 -> alert_0.0 [label="2"]
+node [label=alert_1.0,style=""] alert_1.0
+0 -> alert_1.0 [label="default"]
+}

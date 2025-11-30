@@ -1,0 +1,13 @@
+{
+  "feature": "petal_width",
+  "accuracy": 0.9463087248322147,
+  "explainability": 1.0,
+  "correct": 141,
+  "samples": 149,
+  "cost": 7.9999999999999885,
+  "correctnessReward": 141,
+  "explainibilityReward": 149,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_width.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_width.dot",
+  "png": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_width.png"
+}

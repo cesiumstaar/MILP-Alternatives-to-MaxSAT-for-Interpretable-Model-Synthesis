@@ -1,0 +1,13 @@
+{
+  "feature": "init_pos",
+  "accuracy": 0.9,
+  "explainability": 1.0,
+  "correct": 90,
+  "samples": 100,
+  "cost": 10.000000000000009,
+  "correctnessReward": 90,
+  "explainibilityReward": 100,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/ICML/AutoTaxi/program/program_simple_init_pos.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/ICML/AutoTaxi/program/program_simple_init_pos.dot",
+  "png": null
+}

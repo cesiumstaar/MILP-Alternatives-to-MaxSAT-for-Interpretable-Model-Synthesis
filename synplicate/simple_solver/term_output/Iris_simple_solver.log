@@ -1,0 +1,21 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- Found cache file 'sampler_cache_4_features.pkl'. Loading data. ---
+Explored 4 features to find a single-node classifier.
+Best feature: petal_length
+Synthesized program: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_length.py
+Visualization: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_length.dot
+Image stored at: /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/Iris_program_simple_petal_length_1763959192.png
+Synthesis time:0.630441427230835
+Accuracy:0.729536218796362 (22620/31006)
+Explainability: 1.0
+Total cost:8386.000000000004
+correctnessReward: 22620
+explainibilityReward: 31006
+
+
+--- Standard Error (stderr) ---

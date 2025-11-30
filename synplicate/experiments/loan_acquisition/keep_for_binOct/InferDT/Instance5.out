@@ -1,0 +1,26 @@
+Try with k=1
+Try with k=2
+Try with k=3
+Try with k=4
+
+
+
+===== RESULT =====
+Depth: 4
+Number of nodes: 15
+Accuracy: 96.1039 %
+age>24
+| age>35: 1
+| !age>35
+| | age>30
+| | | monthly_income>8776.33: 0
+| | | !monthly_income>8776.33: 1
+| | !age>30
+| | | monthly_income>4376.17: 0
+| | | !monthly_income>4376.17: 1
+!age>24
+| credit_score>615: 0
+| !credit_score>615
+| | monthly_income>2512.24: 0
+| | !monthly_income>2512.24: 1
+

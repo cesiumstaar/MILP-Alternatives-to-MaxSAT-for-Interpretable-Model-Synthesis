@@ -1,0 +1,19 @@
+#! /bin/bash 
+ulimit -v 8192000
+ulimit -H -v
+exp_dir=experiments/theorem_prover/keep_for_binOct
+#exp_dir=experiments/california_census/keep_for_binOct
+#exp_dir=experiments/loan_acquisition/keep_for_binOct
+#No of instances in LA is 8 and xlimit is 9
+#No of instances in CC is 6 and xlimit is 5
+#No of instances in TP is 6 and xlimit is 7
+
+for i in 1 2 3 4 5 6  
+#for i in 1 8
+do
+echo "Running on ${exp_dir}/Instance${i}/samples/erm_syn_samples.csv "
+python3 ${exp_dir}/../binarize.py ${exp_dir}/Instance${i}/samples/erm_syn_samples.csv 
+python3 ${exp_dir}/../binarize.py ${exp_dir}/Instance${i}/samples/dt_samples.csv  
+#(time -p python3 dl85_1.py ${exp_dir}/Instance${i}/samples 3  > ${exp_dir}/dl85/Instance${i}.out) 2> ${exp_dir}/dl85/Instance${i}.err
+(time -p python3 dl85_1.py ${exp_dir}/Instance${i}/samples 7  > ${exp_dir}/dl85/Instance${i}.out) 2> ${exp_dir}/dl85/Instance${i}.err
+done

@@ -1,0 +1,200 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3_1/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing model and real samples. ---
+
+FATAL ERROR: Data file not found at 'experiments/Adult3_1/adult.data'. Please ensure path is correct.
+
+
+
+--- Standard Error (stderr) ---
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing model and real samples. ---
+
+FATAL ERROR: Data file not found at 'experiments/Adult3/adult.data'. Please ensure path is correct.
+
+
+
+--- Standard Error (stderr) ---
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Banknote3/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing model and real samples. ---
+
+FATAL ERROR: Data file not found at 'experiments/Banknote3/data_banknote_authentication.txt'. Please ensure the path is correct.
+
+
+
+--- Standard Error (stderr) ---
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Banknote4/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing model and real samples. ---
+
+FATAL ERROR: Data file not found at 'experiments/Banknote4/data_banknote_authentication.txt'. Please ensure the path is correct.
+
+
+
+--- Standard Error (stderr) ---
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/california_census/
+
+--- Return Code: 1 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing empty cache. ---
+
+
+--- Standard Error (stderr) ---
+2025-11-23 21:24:10.516734: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 21:24:10.518091: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 21:24:10.540575: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 21:24:10.540605: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 21:24:10.541383: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 21:24:10.545561: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 21:24:10.545702: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 21:24:10.964972: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 259, in <module>
+    main()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 185, in main
+    samples = load_samples(sampler, sample_limit=args.max_samples)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 82, in load_samples
+    ensure_cache_loaded(sampler_module)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 78, in ensure_cache_loaded
+    load_func()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/california_census/sampler.py", line 32, in _load_or_initialize_cache
+    with open(_CACHE_FILENAME, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/california_census/sampler_cache_tf.pkl'
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/ICML/AutoTaxi/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+
+FATAL ERROR: Source CSV file not found at 'experiments/ICML/AutoTaxi/data.csv'.
+
+No samples available for evaluation.
+
+
+--- Standard Error (stderr) ---
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/
+
+--- Return Code: 1 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing model and real samples. ---
+
+
+--- Standard Error (stderr) ---
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 259, in <module>
+    main()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 185, in main
+    samples = load_samples(sampler, sample_limit=args.max_samples)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 82, in load_samples
+    ensure_cache_loaded(sampler_module)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 78, in ensure_cache_loaded
+    load_func()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/sampler.py", line 52, in _load_or_initialize_cache
+    with open(_CACHE_FILENAME, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/Iris3/sampler_cache.pkl'
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- Found cache file 'sampler_cache_4_features.pkl'. Loading data. ---
+Explored 4 features to find a single-node classifier.
+Best feature: petal_width
+Synthesized program: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_width.py
+Visualization: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/program/program_simple_petal_width.dot
+Synthesis time:0.5197772979736328
+Accuracy:0.9463087248322147 (141/149)
+Explainability: 1.0
+Total cost:7.9999999999999885
+correctnessReward: 141
+explainibilityReward: 149
+
+
+--- Standard Error (stderr) ---
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/loan_acquisition/
+
+--- Return Code: 1 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing empty cache. ---
+
+
+--- Standard Error (stderr) ---
+2025-11-23 21:24:12.542565: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 21:24:12.543956: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 21:24:12.566959: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 21:24:12.566988: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 21:24:12.567767: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 21:24:12.571852: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 21:24:12.571992: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 21:24:12.993670: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 259, in <module>
+    main()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 185, in main
+    samples = load_samples(sampler, sample_limit=args.max_samples)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 82, in load_samples
+    ensure_cache_loaded(sampler_module)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 78, in ensure_cache_loaded
+    load_func()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/loan_acquisition/sampler.py", line 31, in _load_or_initialize_cache
+    with open(_CACHE_FILENAME, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/loan_acquisition/sampler_cache_loan.pkl'
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/
+
+--- Return Code: 1 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing empty cache. ---
+
+
+--- Standard Error (stderr) ---
+2025-11-23 21:24:14.533548: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 21:24:14.534937: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 21:24:14.557650: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 21:24:14.557679: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 21:24:14.558457: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 21:24:14.562511: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 21:24:14.562648: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 21:24:14.983646: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 259, in <module>
+    main()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 185, in main
+    samples = load_samples(sampler, sample_limit=args.max_samples)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 82, in load_samples
+    ensure_cache_loaded(sampler_module)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 78, in ensure_cache_loaded
+    load_func()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/sampler.py", line 31, in _load_or_initialize_cache
+    with open(_CACHE_FILENAME, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/theorem_prover/sampler_cache_theorem_prover.pkl'

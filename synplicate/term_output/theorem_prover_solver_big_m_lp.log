@@ -1,0 +1,128 @@
+--- Command ---
+python3 synplicate.py experiments/theorem_prover/ --solver=solver_big_m_lp
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+F1:4:1,
+F10:3:1
+experiments/theorem_prover//
+(7, {'F1': 4, 'F10': 3}, {'F1': 1, 'F10': 1}, {'H1': 2}, {'F1': <function F1 at 0x7d853bf14ee0>, 'F10': <function F10 at 0x7d853bf15000>, 'H1': <function H1 at 0x7d853bf15090>}, False)
+Using 31268 samples ...
+--- Found cache file 'experiments/theorem_prover/sampler_cache_theorem_prover.pkl'. Loading samples. ---
+
+--- WARNING: All 3731 unique feature combinations have been generated. Cannot generate more. ---
+--- Returning all available samples. ---
+Got 3731 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('F1', 0.33), ('F10', 2.5)) -> Label: [('H1', 1)]
+Sample 2: Features: (('F1', 0.16), ('F10', 4.4)) -> Label: [('H1', 1)]
+Sample 3: Features: (('F1', 0.84), ('F10', 3.9)) -> Label: [('H1', 1)]
+Sample 4: Features: (('F1', 0.76), ('F10', 2.1)) -> Label: [('H1', 1)]
+Sample 5: Features: (('F1', 0.57), ('F10', 2.9)) -> Label: [('H1', 1)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 14
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 14
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: solver_big_m_lp
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Max Sat...
+Total cost:3991.0
+['F1', 'F10']
+SatSamples :3731
+explainibilityReward: 3730
+correctnessReward: 3731
+experiments/theorem_prover//
+Extracting program from witness...
+(6,3) -> H1_1
+(6,3) -> H1_0
+(6,2) -> H1_1
+(6,2) -> H1_0
+(6,1) -> H1_1
+(6,1) -> H1_0
+(6,0) -> H1_1
+(6,0) -> H1_0
+(5,3) -> H1_1
+(5,3) -> H1_0
+(5,3) -> 6
+(5,2) -> 6
+(5,1) -> 6
+(5,0) -> 6
+(4,3) -> H1_1
+(4,3) -> 6
+(4,3) -> 5
+(4,2) -> 5
+(4,1) -> H1_1
+(4,1) -> 6
+(4,1) -> 5
+(4,0) -> 5
+(3,3) -> H1_0
+(3,3) -> 5
+(3,3) -> 4
+(3,2) -> H1_1
+(3,2) -> 6
+(3,2) -> 5
+(3,2) -> 4
+(3,1) -> 4
+(3,0) -> 4
+(2,3) -> 4
+(2,3) -> 3
+(2,2) -> 5
+(2,2) -> 4
+(2,2) -> 3
+(2,1) -> 5
+(2,1) -> 3
+(2,0) -> 5
+(2,0) -> 3
+(1,3) -> 3
+(1,3) -> 2
+(1,2) -> H1_1
+(1,2) -> 4
+(1,2) -> 3
+(1,2) -> 2
+(1,1) -> 2
+(1,0) -> 2
+(0,3) -> H1_1
+(0,3) -> H1_0
+(0,2) -> H1_1
+(0,2) -> H1_0
+(0,1) -> H1_1
+(0,1) -> H1_0
+(0,0) -> H1_1
+(0,0) -> H1_0
+0: F10
+0: F1
+Synthesized program: experiments/theorem_prover//program/program_ms_0_100_0_erm.py
+Visualization: experiments/theorem_prover//program/program_ms_0_100_0_erm.dot
+Synthesis time:1.8227608559827786
+Accuracy:1.0 (3731/3731)
+Explainability: 0.9997319753417314
+Adding region (0,99,1.0)
+Adding region (99,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/theorem_prover//program/program_ms_0_100_0_erm.py', 1.0, 0.9997319753417314)]
+
+
+--- Standard Error (stderr) ---
+2025-11-23 15:30:53.477903: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 15:30:53.479427: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 15:30:53.502270: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 15:30:53.502299: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 15:30:53.503080: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 15:30:53.507170: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 15:30:53.507318: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 15:30:53.936061: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT

@@ -1,0 +1,14 @@
+c Using random seed 0, runIndex 0
+c Parsing formula...
+c Formula has 18 maximization and 1217 counting variables
+c Generating 20 independent samples from 1-fold self-composition
+c Sampling with tolerance (1+16.002195)... completed in 468 s
+c Obtained 19 distinct assignments to maximization variables
+c Using 2000 Monte Carlo samples, enumeration threshold 256
+c Using density confidence 0.995, granularity 0.0363948
+c Using hashing tolerance (1+1) and confidence 0.99
+c Counting witness 1 with Monte Carlo... 0.000 x 2^1217
+c Counting witness 1 with enumeration... 1.812 x 2^6
+c Counting witness 2 with Monte Carlo... 0.000 x 2^1217
+c Counting witness 2 with enumeration... threshold exceeded
+c Counting witness 2 with hashing... OPENING COUNT FILE HASHING

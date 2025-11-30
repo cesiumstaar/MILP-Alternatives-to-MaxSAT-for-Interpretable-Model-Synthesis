@@ -1,0 +1,5 @@
+size = 3
+features = age:integer:4, monthly_income:float:2
+labels = approved:2
+extend = False
+feature_defs = feature_defs

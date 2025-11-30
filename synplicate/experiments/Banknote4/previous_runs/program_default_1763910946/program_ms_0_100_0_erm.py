@@ -1,0 +1,31 @@
+import sys
+sys.path.insert(0,"experiments/Banknote4//")
+import feature_defs
+
+def execute(inputs):
+	program_nodes ={}
+	program_nodes["0"]= "variance"
+
+	program_edges ={}
+	program_edges[("0",3)]= "class_0"
+	program_edges[("0",2)]= "class_0"
+	program_edges[("0",1)]= "class_1"
+	program_edges[("0",0)]= "class_1"
+
+	features = feature_defs.retrieve_feature_defs()
+
+	value_map = {} 
+	value_map["variance"] = features["variance"]([("variance",inputs[0]),("skewness",inputs[1]),("curtosis",inputs[2]),("entropy",inputs[3])])
+
+	flag = True
+	current_node = "0"
+	while flag:
+		current_feature = program_nodes[current_node]
+		next_node = program_edges[current_node,value_map[current_feature]]
+		if next_node.isdigit():
+			current_node = next_node
+		else:
+			current_node = next_node
+			flag = False
+	return current_node
+

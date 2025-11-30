@@ -1,0 +1,104 @@
+2020-06-11 19:56:05.824462: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-06-11 19:56:05.824507: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-06-11 19:56:05.824531: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (supratik-laptop): /proc/driver/nvidia/version does not exist
+2020-06-11 19:56:05.824743: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-06-11 19:56:05.850001: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2400000000 Hz
+2020-06-11 19:56:05.850308: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f1e08000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-06-11 19:56:05.850345: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+Sampling initial 20 samples ...
+----------------------
+age :  46 | monthly_income :  4383 | [[0.00181994 0.99818003]]
+1
+----------------------
+age :  31 | monthly_income :  1261 | [[0.04753974 0.9524602 ]]
+1
+----------------------
+age :  51 | monthly_income :  1692 | [[8.6541069e-05 9.9991345e-01]]
+1
+----------------------
+age :  70 | monthly_income :  4708 | [[8.0201892e-07 9.9999917e-01]]
+1
+----------------------
+age :  34 | monthly_income :  2768 | [[0.03918709 0.9608129 ]]
+1
+----------------------
+age :  35 | monthly_income :  8917 | [[0.41954392 0.58045614]]
+1
+----------------------
+age :  49 | monthly_income :  3646 | [[4.6244156e-04 9.9953759e-01]]
+1
+----------------------
+age :  52 | monthly_income :  1627 | [[6.0202114e-05 9.9993980e-01]]
+1
+----------------------
+age :  31 | monthly_income :  3443 | [[0.1346443  0.86535573]]
+1
+----------------------
+age :  56 | monthly_income :  7980 | [[4.4194772e-04 9.9955803e-01]]
+1
+----------------------
+age :  57 | monthly_income :  2164 | [[1.5364507e-05 9.9998462e-01]]
+1
+----------------------
+age :  66 | monthly_income :  2361 | [[8.8063041e-07 9.9999917e-01]]
+1
+----------------------
+age :  76 | monthly_income :  5575 | [[1.7492133e-07 9.9999988e-01]]
+1
+----------------------
+age :  77 | monthly_income :  2650 | [[2.7419324e-08 1.0000000e+00]]
+1
+----------------------
+age :  55 | monthly_income :  9100 | [[0.00110034 0.9988997 ]]
+1
+----------------------
+age :  52 | monthly_income :  9542 | [[0.00370748 0.99629253]]
+1
+----------------------
+age :  59 | monthly_income :  8091 | [[1.7453718e-04 9.9982554e-01]]
+1
+----------------------
+age :  40 | monthly_income :  9237 | [[0.141437 0.858563]]
+1
+----------------------
+age :  29 | monthly_income :  1039 | [[0.0790791 0.9209209]]
+1
+----------------------
+age :  60 | monthly_income :  1202 | [[3.4679704e-06 9.9999654e-01]]
+1
+----------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'age': 4, 'monthly_income': 2}, and labels {'approved': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   39 ind variables
+Maximum model counting...
+Witness found! Count:  1.25x2^4
+Extracting program from witness...
+(1,1) -> approved_1
+(1,0) -> approved_1
+(0,3) -> approved_1
+(0,2) -> 1
+(0,1) -> 1
+(0,0) -> 1
+1: monthly_income
+0: age
+Synthesized program: examples/loan_acquisition/program/
+Visualization: examples/loan_acquisition/program/program0.dot
+Synthesis time:2.2523913411423564
+Evaluating program against model...
+Current true positives:20, and false negatives: 0
+Neighbor true positives:177, and false negatives: 3
+Current distance: 0.0
+Neighbor distance: 0.01666666666666672
+0.01666666666666672
+Evaluation time:6.312098870053887
+Size of sample set: 20
+--------------------------------------------------
+================================================
+Synthesis complete after 1 iterations!
+Time: 8.564490211196244

@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\title{Correctness Notes for the MaxSAT Encoding}
+\author{Auto-generated}
+\begin{document}
+\maketitle
+
+\section{Weighting Strategy}
+Let $W_{\text{expl}}$ be the multiset of explainability weights assigned to the soft literals
+and $W_{\text{corr}}$ the weights used for correctness. The implementation normalises
+all explainability weights so that each $w \in W_{\text{expl}}$ satisfies $w \geq 1$ and
+$\max W_{\text{expl}} = w_{\max}$. Correctness weights are set to $w_{\max}$, ensuring
+$\max W_{\text{corr}} = \max W_{\text{expl}}$ while preserving the unit weights of the
+underlying samples. Because every soft weight is positive, the hard-clause weight is
+chosen as $1 + \sum_{w \in W_{\text{expl}} \cup W_{\text{corr}}} w$, making any violation of
+a hard clause strictly more costly than the sum of all soft violations.
+
+\section{Non-Repeatability Encoding}
+For nodes $i<j$, the reachability variable $R_{i,j}$ is forced true whenever a transition
+$\tau_{i,c,j}$ is present and is transitively closed via clauses
+$\neg R_{i,k} \lor \neg R_{k,j} \lor R_{i,j}$. We explicitly distinguish between the
+template assignment variable $\lambda_{i,p}$ and the active variable
+$\lambda'_{i,p} \leftrightarrow (u_i \wedge \lambda_{i,p})$, where the usage variable $u_i$
+is defined recursively as $u_1$ and $u_i \leftrightarrow \bigvee_{i'<i,c}(\tau_{i',c,i}\wedge u_{i'})$.
+The non-repeatability clauses now use $\lambda'$ to state
+$\neg \lambda'_{i,p} \lor \neg R_{i,j} \lor \neg \lambda'_{j,p}$, ensuring that only
+predicates on reachable nodes are constrained. Using the conjoined formula
+$\Phi_{\text{repeat}} = \Phi_{\text{reach}} \wedge \Phi_{\text{non-repeat}}$ guarantees
+that every satisfying assignment corresponds to an acyclic decision diagram with
+predicate uniqueness along each root-to-leaf path while ignoring unused template nodes.
+$\neg R_{i,k} \lor \neg R_{k,j} \lor R_{i,j}$. The non-repeatability clauses
+$\neg \lambda_{i,p} \lor \neg R_{i,j} \lor \neg \lambda_{j,p}$ then forbid predicate $p$
+from appearing twice along any reachable path. Using the conjoined formula
+$\Phi_{\text{repeat}} = \Phi_{\text{reach}} \wedge \Phi_{\text{non-repeat}}$ guarantees
+that every satisfying assignment corresponds to an acyclic decision diagram with
+predicate uniqueness along each root-to-leaf path.
+
+\section{Pareto Optimality}
+Soft literals capture two objectives: correctness and explainability. Because both share
+the same maximum weight, the solver cannot compensate an arbitrarily large loss in one
+objective with a gain in the other. Minimising the sum of violated soft clauses therefore
+returns assignments where neither objective can be improved without worsening the other,
+which is precisely Pareto optimality in this bi-objective setting.
+\end{document}

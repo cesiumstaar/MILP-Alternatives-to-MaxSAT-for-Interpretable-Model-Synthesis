@@ -1,0 +1,117 @@
+--- Command ---
+python3 synplicate.py experiments/Banknote3/ --solver=milp_solver_naive_old
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+variance:4:1,
+skewness:4:1,
+curtosis:4:1
+experiments/Banknote3//
+(3, {'variance': 4, 'skewness': 4, 'curtosis': 4}, {'variance': 1, 'skewness': 1, 'curtosis': 1}, {'class': 2}, {'variance': <function variance at 0x7e1ae5118d30>, 'skewness': <function skewness at 0x7e1ae5118e50>, 'curtosis': <function curtosis at 0x7e1ae5118ee0>, 'class': <function CLASS at 0x7e1ae5118f70>}, False)
+Using 24621 samples ...
+--- Found cache file 'experiments/Banknote3/sampler_cache_banknote.pkl'. Loading data. ---
+Got 24621 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('variance', 1.3378044892073877), ('skewness', 8.338203639332807), ('curtosis', 15.93831832257078)) -> Label: [('class', 0)]
+Sample 2: Features: (('variance', -4.274363027977353), ('skewness', -8.569120089316499), ('curtosis', -0.7254402861361626)) -> Label: [('class', 1)]
+Sample 3: Features: (('variance', -1.4146181205885568), ('skewness', -1.9076520870234468), ('curtosis', -3.557334418820684)) -> Label: [('class', 1)]
+Sample 4: Features: (('variance', -2.3566367164889384), ('skewness', 1.992678218349889), ('curtosis', 8.063240452948413)) -> Label: [('class', 0)]
+Sample 5: Features: (('variance', -4.251120333158641), ('skewness', -10.893922854788222), ('curtosis', 5.780802110376398)) -> Label: [('class', 1)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 6
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 6
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_naive_old
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 7881 rows, 2735 columns and 18306 nonzeros (Min)
+Model fingerprint: 0x62ba490d
+Model has 105 linear objective coefficients
+Variable types: 0 continuous, 2735 integer (2735 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [6e+00, 8e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 4410 rows and 2024 columns
+Presolve time: 0.11s
+Presolved: 3471 rows, 711 columns, 11253 nonzeros
+Variable types: 0 continuous, 711 integer (711 binary)
+Found heuristic solution: objective 41235.000000
+
+Root relaxation: objective 3.829833e+04, 660 iterations, 0.01 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 38298.3333    0  235 41235.0000 38298.3333  7.12%     -    0s
+H    0     0                    41223.000000 38298.3333  7.09%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 15
+  MIR: 21
+  Zero half: 82
+  RLT: 66
+  BQP: 4
+
+Explored 1 nodes (1101 simplex iterations) in 0.18 seconds (0.29 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 41223 41235 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.122300000000e+04, best bound 4.122300000000e+04, gap 0.0000%
+Total cost:41223.0
+['variance', 'skewness', 'curtosis']
+SatSamples :19490
+explainibilityReward: 20517
+correctnessReward: 19490
+experiments/Banknote3//
+Extracting program from witness...
+(2,3) -> class_0
+(2,2) -> class_0
+(2,1) -> class_0
+(2,0) -> class_0
+(1,3) -> class_1
+(1,2) -> class_0
+(1,1) -> class_0
+(1,0) -> 2
+(0,3) -> class_0
+(0,2) -> class_0
+(0,1) -> class_1
+(0,0) -> class_1
+0: variance
+Synthesized program: experiments/Banknote3//program/program_ms_0_100_0_erm.py
+Visualization: experiments/Banknote3//program/program_ms_0_100_0_erm.dot
+Synthesis time:8.505251387017779
+Accuracy:0.7916006660980464 (19490/24621)
+Explainability: 0.8333130254660656
+Adding region (0,83,0.7916006660980464)
+Adding region (83,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/Banknote3//program/program_ms_0_100_0_erm.py', 0.7916006660980464, 0.8333130254660656)]
+
+
+--- Standard Error (stderr) ---

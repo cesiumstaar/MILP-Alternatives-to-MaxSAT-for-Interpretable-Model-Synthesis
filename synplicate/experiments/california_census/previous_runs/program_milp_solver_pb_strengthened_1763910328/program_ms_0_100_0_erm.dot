@@ -1,0 +1,12 @@
+digraph {
+node [label=Class_1,style=""] Class_1
+node [label=Class_0,style=""] Class_0
+node [label=Class_3,style=""] Class_3
+node [label=Class_0,style=""] Class_0
+node [label=population,shape="diamond",style=""] 0
+
+0 -> Class_1 [label="3"]
+0 -> Class_0 [label="2"]
+0 -> Class_3 [label="1"]
+0 -> Class_0 [label="0"]
+}

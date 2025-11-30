@@ -1,0 +1,6 @@
+size: 3
+initial num samples: 20
+radius: 1
+sample rate: 15
+robustness: 0.02
+numIterations: 10

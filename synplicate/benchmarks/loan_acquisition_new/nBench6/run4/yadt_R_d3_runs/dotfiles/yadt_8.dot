@@ -1,0 +1,11 @@
+digraph YaDT {
+n0 [ shape=box, label="age\n"]
+n0 -> n1 [label="<=30"]
+n1 [ shape=box, label="age\n"]
+n1 -> n2 [label="<=29"]
+n2 [ shape=ellipse, label="0\n(3/1.1)"]
+n1 -> n3 [label=">29"]
+n3 [ shape=ellipse, label="1\n(5/1.2)"]
+n0 -> n5 [label=">30"]
+n5 [ shape=ellipse, label="1\n(140/1.3)"]
+}

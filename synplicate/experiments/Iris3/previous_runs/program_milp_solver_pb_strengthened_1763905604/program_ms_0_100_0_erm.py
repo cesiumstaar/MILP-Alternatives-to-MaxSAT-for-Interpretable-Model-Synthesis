@@ -1,0 +1,37 @@
+import sys
+sys.path.insert(0,"experiments/Iris3//")
+import feature_defs
+
+def execute(inputs):
+	program_nodes ={}
+	program_nodes["2"]= "petal_width"
+	program_nodes["0"]= "petal_length"
+
+	program_edges ={}
+	program_edges[("2",3)]= "species_2"
+	program_edges[("2",2)]= "species_1"
+	program_edges[("2",1)]= "species_1"
+	program_edges[("2",0)]= "species_1"
+	program_edges[("0",3)]= "species_2"
+	program_edges[("0",2)]= "2"
+	program_edges[("0",1)]= "species_0"
+	program_edges[("0",0)]= "species_0"
+
+	features = feature_defs.retrieve_feature_defs()
+
+	value_map = {} 
+	value_map["petal_width"] = features["petal_width"]([("sepal_length",inputs[0]),("petal_length",inputs[1]),("petal_width",inputs[2])])
+	value_map["petal_length"] = features["petal_length"]([("sepal_length",inputs[0]),("petal_length",inputs[1]),("petal_width",inputs[2])])
+
+	flag = True
+	current_node = "0"
+	while flag:
+		current_feature = program_nodes[current_node]
+		next_node = program_edges[current_node,value_map[current_feature]]
+		if next_node.isdigit():
+			current_node = next_node
+		else:
+			current_node = next_node
+			flag = False
+	return current_node
+

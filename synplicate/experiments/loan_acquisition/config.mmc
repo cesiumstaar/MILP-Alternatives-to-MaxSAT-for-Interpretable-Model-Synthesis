@@ -1,0 +1,5 @@
+size = 4
+features = age:4, monthly_income:2, dependents:2, credit_score:3
+labels = approved:2
+extend = False
+feature_defs = feature_defs

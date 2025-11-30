@@ -1,0 +1,30 @@
+digraph {
+node [label=H1_1,style=""] H1_1
+node [label=H1_1,style=""] H1_1
+node [label=H1_1,style=""] H1_1
+node [label=H1_1,style=""] H1_1
+node [label=H1_1,style=""] H1_1
+node [label=H1_0,style=""] H1_0
+node [label=H1_1,style=""] H1_1
+node [label=H1_0,style=""] H1_0
+node [label=H1_0,style=""] H1_0
+node [label=H1_1,style=""] H1_1
+node [label=F10,shape="diamond",style=""] 6
+node [label=F10,shape="diamond",style=""] 5
+node [label=F10,shape="diamond",style=""] 2
+node [label=F1,shape="diamond",style=""] 0
+
+6 -> H1_1 [label="2"]
+6 -> H1_1 [label="1"]
+6 -> H1_1 [label="0"]
+5 -> H1_1 [label="2"]
+5 -> H1_1 [label="1"]
+5 -> H1_0 [label="0"]
+2 -> H1_1 [label="2"]
+2 -> H1_0 [label="1"]
+2 -> H1_0 [label="0"]
+0 -> 5 [label="3"]
+0 -> H1_1 [label="2"]
+0 -> 6 [label="1"]
+0 -> 2 [label="0"]
+}

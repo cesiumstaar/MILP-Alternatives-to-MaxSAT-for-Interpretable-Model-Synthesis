@@ -1,0 +1,21 @@
+--- Command ---
+python3 synplicate.py experiments/Banknote4/ --solver=milp_solver_big_m
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+variance:4:1,
+skewness:4:1,
+curtosis:4:1,
+entropy:4:1
+experiments/Banknote4//
+(4, {'variance': 4, 'skewness': 4, 'curtosis': 4, 'entropy': 4}, {'variance': 1, 'skewness': 1, 'curtosis': 1, 'entropy': 1}, {'class': 2}, {'variance': <function variance at 0x778cff390d30>, 'skewness': <function skewness at 0x778cff390e50>, 'curtosis': <function curtosis at 0x778cff390ee0>, 'entropy': <function entropy at 0x778cff390f70>, 'class': <function CLASS at 0x778cff391000>}, False)
+
+
+--- Standard Error (stderr) ---
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/synplicate.py", line 76, in <module>
+    samples, Gamma = erm.execute(synthesis_benchmark_path,synthesizer,confidence,error_margin,"ms", solver=solver)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/methods/erm/erm_procedure.py", line 21, in execute

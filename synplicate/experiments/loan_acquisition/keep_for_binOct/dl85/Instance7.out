@@ -1,0 +1,20 @@
+##########################################################################
+#            DL8.5 default classifier using iterative search  with different max depths #
+##########################################################################
+max depth = 3
+Model building...
+DL8.5 fitting: Solution found
+(nItems, nTransactions) : ( 10, 341 )
+Tree: {'feat': 0, 'left': {'value': 1, 'error': 52.0}, 'right': {'feat': 4, 'left': {'value': 0, 'error': 51.0}, 'right': {'value': 1, 'error': 48.0}}}
+Size: 5
+Depth: 2
+Error: 151.0
+LatticeSize: 129
+Runtime: 0.000414
+Timeout: False
+Model built. Duration of building = 0.0243
+Confusion Matrix below
+[[ 48 117]
+ [ 61 159]]
+Accuracy DL8.5 on training set = 0.5572
+Accuracy DL8.5 on test set = 0.5377

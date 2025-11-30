@@ -1,0 +1,50 @@
+--- Command ---
+python3 synplicate.py experiments/Iris/ --solver=milp_solver_big_m
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+sepal_length:4:1,
+sepal_width:4:1,
+petal_length:4:1,
+petal_width:4:1
+experiments/Iris//
+(4, {'sepal_length': 4, 'sepal_width': 4, 'petal_length': 4, 'petal_width': 4}, {'sepal_length': 1, 'sepal_width': 1, 'petal_length': 1, 'petal_width': 1}, {'species': 3}, {'sepal_length': <function sepal_length at 0x7b066c60cc10>, 'sepal_width': <function sepal_width at 0x7b066c60cdc0>, 'petal_length': <function petal_length at 0x7b066c60cd30>, 'petal_width': <function petal_width at 0x7b066c60ce50>, 'species': <function species at 0x7b066c60cee0>}, False)
+
+
+--- Standard Error (stderr) ---
+rm: cannot remove 'experiments/Iris//maxsat_encoding/': No such file or directory
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/synplicate.py", line 76, in <module>
+    samples, Gamma = erm.execute(synthesis_benchmark_path,synthesizer,confidence,error_margin,"ms", solver=solver)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/methods/erm/erm_procedure.py", line 21, in execute
+    sampler = importlib.import_module(f".sampler",benchmark_path.replace("/",".").rstrip('.'))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris/sampler.py", line 7, in <module>
+    from sklearn.datasets import load_iris
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from .validation import _is_arraylike_not_scalar
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 15, in <module>
+    import joblib
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/joblib/__init__.py", line 120, in <module>
+    from .memory import MemorizedResult, Memory, expires_after, register_store_backend
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/joblib/memory.py", line 11, in <module>
+    import asyncio
+  File "/usr/lib/python3.10/asyncio/__init__.py", line 8, in <module>

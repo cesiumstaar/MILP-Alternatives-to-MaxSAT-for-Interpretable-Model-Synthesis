@@ -1,0 +1,3 @@
+age,integer,continuous
+monthly_income,float,continuous
+approved,string,class

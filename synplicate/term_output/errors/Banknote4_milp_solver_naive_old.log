@@ -1,0 +1,19 @@
+--- Command ---
+python3 synplicate.py experiments/Banknote4/ --solver=milp_solver_naive_old
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+
+
+--- Standard Error (stderr) ---
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/synplicate.py", line 12, in <module>
+    from synthesizer.max_sat import ms_synthesizer
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/synthesizer/max_sat/ms_synthesizer.py", line 3, in <module>
+    import pandas
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/pandas/__init__.py", line 139, in <module>
+    from pandas import testing
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/pandas/testing.py", line 6, in <module>
+    from pandas._testing import (
+  File "/home/lenin31/Desktop/repos/F1ML/venv/lib/python3.10/site-packages/pandas/_testing/__init__.py", line 44, in <module>

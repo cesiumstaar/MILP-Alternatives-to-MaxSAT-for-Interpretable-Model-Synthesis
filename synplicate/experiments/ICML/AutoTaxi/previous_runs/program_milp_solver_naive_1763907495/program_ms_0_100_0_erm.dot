@@ -1,0 +1,16 @@
+digraph {
+node [label=alert_0,style=""] alert_0
+node [label=alert_0,style=""] alert_0
+node [label=alert_1,style=""] alert_1
+node [label=alert_1,style=""] alert_1
+node [label=alert_1,style=""] alert_1
+node [label=alert_1,style=""] alert_1
+node [label=clouds,shape="diamond",style=""] 0
+
+0 -> alert_0 [label="5"]
+0 -> alert_0 [label="4"]
+0 -> alert_1 [label="3"]
+0 -> alert_1 [label="2"]
+0 -> alert_1 [label="1"]
+0 -> alert_1 [label="0"]
+}

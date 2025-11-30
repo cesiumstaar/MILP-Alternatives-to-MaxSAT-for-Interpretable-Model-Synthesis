@@ -1,0 +1,13 @@
+#! /bin/bash
+
+ulimit -v 8192000
+ulimit -H -v
+#exp_dir=experiments/theorem_prover/keep_for_binOct
+exp_dir=experiments/california_census/keep_for_binOct
+exp_dir=experiments/loan_acquisition/keep_for_binOct
+
+for i in 8 
+do
+echo "Running on ${exp_dir}/Instance${i}/samples/erm_syn_samples.csv "
+(time -p ./synthesizer/InferDT/InferDT ${exp_dir}/Instance${i}/samples/erm_syn_samples.csv -v infer -t ${exp_dir}/Instance${i}/samples/dt_samples.csv  > ${exp_dir}/InferDT/Instance${i}.out) 2> ${exp_dir}/InferDT/Instance${i}.err
+done

@@ -1,0 +1,402 @@
+Sampling initial 20 samples ...
+----------------------
+F1 :  0.78 | F10 :  1.7 | [[0.49116483 0.50883514]]
+1
+----------------------
+F1 :  0.54 | F10 :  1.7 | [[0.48937353 0.5106265 ]]
+1
+----------------------
+F1 :  0.63 | F10 :  4.3 | [[0.4422406 0.5577594]]
+1
+----------------------
+F1 :  0.48 | F10 :  3.1 | [[0.47335848 0.52664155]]
+1
+----------------------
+F1 :  0.55 | F10 :  2.3 | [[0.47938862 0.52061146]]
+1
+----------------------
+F1 :  0.66 | F10 :  1.9 | [[0.47586277 0.5241372 ]]
+1
+----------------------
+F1 :  0.16 | F10 :  1.6 | [[0.5240841  0.47591597]]
+0
+----------------------
+F1 :  0.42 | F10 :  4.1 | [[0.46344057 0.53655946]]
+1
+----------------------
+F1 :  0.66 | F10 :  2.5 | [[0.46677196 0.53322804]]
+1
+----------------------
+F1 :  0.68 | F10 :  1.9 | [[0.47472 0.52528]]
+1
+----------------------
+F1 :  0.41 | F10 :  4.9 | [[0.45223382 0.54776615]]
+1
+----------------------
+F1 :  0.24 | F10 :  2.3 | [[0.50646937 0.49353057]]
+0
+----------------------
+F1 :  0.85 | F10 :  2.8 | [[0.44888148 0.5511185 ]]
+1
+----------------------
+F1 :  0.97 | F10 :  3.0 | [[0.43991515 0.5600848 ]]
+1
+----------------------
+F1 :  0.66 | F10 :  2.6 | [[0.46525884 0.53474116]]
+1
+----------------------
+F1 :  0.1 | F10 :  2.9 | [[0.50958306 0.49041697]]
+0
+----------------------
+F1 :  0.22 | F10 :  4.7 | [[0.47176346 0.5282365 ]]
+1
+----------------------
+F1 :  0.88 | F10 :  3.3 | [[0.43718165 0.56281835]]
+1
+----------------------
+F1 :  0.2 | F10 :  4.7 | [[0.47350615 0.52649385]]
+1
+----------------------
+F1 :  0.87 | F10 :  1.3 | [[0.5273929  0.47260708]]
+0
+----------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   36 ind variables
+Maximum model counting...
+Witness found! Count:  1.0625x2^4
+Extracting program from witness...
+(1,3) -> H1_0
+(1,2) -> H1_1
+(1,1) -> H1_1
+(1,0) -> H1_0
+(0,3) -> H1_1
+(0,2) -> H1_1
+(0,1) -> H1_1
+(0,0) -> 1
+1: F1
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program0.dot
+Synthesis time:3.545654991
+Evaluating program against model...
+Current true positives:17, and false negatives: 3
+Neighbor true positives:350, and false negatives: 150
+Current distance: 0.15000000000000002
+Neighbor distance: 0.30000000000000004
+0.15000000000000002
+Refining sample set...
+Evaluation time:12.258884231
+Size of sample set: 36
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   43 ind variables
+Maximum model counting...
+Witness found! Count:  1.75x2^4
+Extracting program from witness...
+(1,3) -> H1_0
+(1,2) -> H1_0
+(1,1) -> H1_1
+(1,0) -> H1_0
+(0,3) -> 1
+(0,2) -> H1_1
+(0,1) -> H1_1
+(0,0) -> 1
+1: F1
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program1.dot
+Synthesis time:3.878353735000001
+Evaluating program against model...
+Current true positives:29, and false negatives: 7
+Neighbor true positives:388, and false negatives: 170
+Current distance: 0.19444444444444442
+Neighbor distance: 0.3046594982078853
+0.11021505376344087
+Refining sample set...
+Evaluation time:23.055589785
+Size of sample set: 52
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   46 ind variables
+Maximum model counting...
+Witness found! Count:  1.25x2^5
+Extracting program from witness...
+(1,3) -> H1_1
+(1,2) -> H1_0
+(1,1) -> H1_0
+(1,0) -> H1_0
+(0,3) -> H1_0
+(0,2) -> H1_1
+(0,1) -> H1_0
+(0,0) -> 1
+1: F1
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program2.dot
+Synthesis time:4.376378582000001
+Evaluating program against model...
+Current true positives:38, and false negatives: 14
+Neighbor true positives:433, and false negatives: 205
+Current distance: 0.2692307692307693
+Neighbor distance: 0.32131661442006265
+0.05208584518929338
+Refining sample set...
+Evaluation time:29.214137927000003
+Size of sample set: 68
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   48 ind variables
+Maximum model counting...
+Witness found! Count:  1.71875x2^5
+Extracting program from witness...
+(1,3) -> H1_0
+(1,2) -> H1_0
+(1,1) -> H1_1
+(1,0) -> H1_1
+(0,3) -> 1
+(0,2) -> H1_1
+(0,1) -> 1
+(0,0) -> H1_0
+1: F1
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program3.dot
+Synthesis time:6.016206410999999
+Evaluating program against model...
+Current true positives:44, and false negatives: 24
+Neighbor true positives:438, and false negatives: 232
+Current distance: 0.3529411764705882
+Neighbor distance: 0.34626865671641793
+0.00667251975417027
+Refining sample set...
+Evaluation time:38.316669178
+Size of sample set: 84
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   53 ind variables
+Maximum model counting...
+Witness found! Count:  1.07812x2^6
+Extracting program from witness...
+(1,3) -> H1_0
+(1,2) -> H1_0
+(1,1) -> H1_1
+(1,0) -> H1_0
+(0,3) -> H1_0
+(0,2) -> H1_1
+(0,1) -> 1
+(0,0) -> 1
+1: F1
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program4.dot
+Synthesis time:8.444699545999995
+Evaluating program against model...
+Current true positives:58, and false negatives: 26
+Neighbor true positives:481, and false negatives: 251
+Current distance: 0.30952380952380953
+Neighbor distance: 0.34289617486338797
+0.033372365339578436
+Refining sample set...
+Evaluation time:47.48856730100002
+Size of sample set: 100
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   59 ind variables
+Maximum model counting...
+Witness found! Count:  1.28125x2^6
+Extracting program from witness...
+(1,2) -> H1_1
+(1,1) -> H1_1
+(1,0) -> H1_0
+(0,3) -> 1
+(0,2) -> 1
+(0,1) -> H1_0
+(0,0) -> H1_0
+1: F10
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program5.dot
+Synthesis time:9.417793797000002
+Evaluating program against model...
+Current true positives:72, and false negatives: 28
+Neighbor true positives:524, and false negatives: 262
+Current distance: 0.28
+Neighbor distance: 0.33333333333333337
+0.053333333333333344
+Refining sample set...
+Evaluation time:56.549485479
+Size of sample set: 116
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   61 ind variables
+Maximum model counting...
+Witness found! Count:  1.39062x2^6
+Extracting program from witness...
+(1,3) -> H1_0
+(1,2) -> H1_1
+(1,1) -> H1_1
+(1,0) -> H1_0
+(0,3) -> H1_0
+(0,2) -> H1_1
+(0,1) -> H1_1
+(0,0) -> H1_0
+1: F1
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program6.dot
+Synthesis time:12.629757834000003
+Evaluating program against model...
+Current true positives:82, and false negatives: 34
+Neighbor true positives:532, and false negatives: 286
+Current distance: 0.2931034482758621
+Neighbor distance: 0.34963325183374083
+0.05652980355787873
+Refining sample set...
+Evaluation time:67.89822381200003
+Size of sample set: 132
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   66 ind variables
+Maximum model counting...
+Witness found! Count:  1.82812x2^6
+Extracting program from witness...
+(1,2) -> H1_1
+(1,1) -> H1_0
+(1,0) -> H1_0
+(0,3) -> 1
+(0,2) -> H1_1
+(0,1) -> 1
+(0,0) -> H1_0
+1: F10
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program7.dot
+Synthesis time:19.92136775800003
+Evaluating program against model...
+Current true positives:95, and false negatives: 37
+Neighbor true positives:563, and false negatives: 299
+Current distance: 0.2803030303030303
+Neighbor distance: 0.3468677494199536
+0.0665647191169233
+Refining sample set...
+Evaluation time:77.000877538
+Size of sample set: 148
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   71 ind variables
+Maximum model counting...
+Witness found! Count:  1.96875x2^6
+Extracting program from witness...
+(1,2) -> H1_1
+(1,1) -> H1_0
+(1,0) -> H1_0
+(0,3) -> 1
+(0,2) -> 1
+(0,1) -> H1_1
+(0,0) -> H1_0
+1: F10
+0: F1
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program8.dot
+Synthesis time:20.896772157999976
+Evaluating program against model...
+Current true positives:106, and false negatives: 42
+Neighbor true positives:608, and false negatives: 330
+Current distance: 0.28378378378378377
+Neighbor distance: 0.35181236673773986
+0.06802858295395608
+Refining sample set...
+Evaluation time:85.66748268600003
+Size of sample set: 164
+--------------------------------------------------
+Extracting synthesis configuration... 
+Synthesizing program with 2 states, features {'F1': 4, 'F10': 3}, and labels {'H1': 2} ...
+Translating to dimacs...
+Translating to maxdimacs...
+|---Extracting maximization variables...
+   24 max variables
+|---Extracting counting variables...
+   73 ind variables
+Maximum model counting...
+Witness found! Count:  1.09375x2^7
+Extracting program from witness...
+(1,3) -> H1_1
+(1,2) -> H1_1
+(1,1) -> H1_1
+(1,0) -> H1_0
+(0,2) -> 1
+(0,1) -> 1
+(0,0) -> H1_0
+1: F1
+0: F10
+Synthesized program: examples/theorem_prover/program/
+Visualization: examples/theorem_prover/program/program9.dot
+Synthesis time:19.64156991599998
+Evaluating program against model...
+Current true positives:112, and false negatives: 52
+Neighbor true positives:617, and false negatives: 349
+Current distance: 0.31707317073170727
+Neighbor distance: 0.3612836438923396
+0.04421047316063231
+Refining sample set...
+Evaluation time:96.08878199800006
+Size of sample set: 180
+--------------------------------------------------
+================================================
+Synthesis complete after 10 iterations!
+Time: 642.3072546630001
+python3 synplicate.py examples/theorem_prover 20 2 15 0.005 10  634.21s user 14.53s system 100% cpu 10:47.82 total

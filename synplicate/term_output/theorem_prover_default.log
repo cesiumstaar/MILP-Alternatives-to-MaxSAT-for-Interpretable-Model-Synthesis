@@ -1,0 +1,95 @@
+--- Command ---
+python3 synplicate.py experiments/theorem_prover/ --solver=default
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+F1:4:1,
+F10:3:1
+experiments/theorem_prover//
+(7, {'F1': 4, 'F10': 3}, {'F1': 1, 'F10': 1}, {'H1': 2}, {'F1': <function F1 at 0x7e4652790dc0>, 'F10': <function F10 at 0x7e4652790ee0>, 'H1': <function H1 at 0x7e4652790f70>}, False)
+Using 31268 samples ...
+--- Found cache file 'experiments/theorem_prover/sampler_cache_theorem_prover.pkl'. Loading samples. ---
+
+--- WARNING: All 3731 unique feature combinations have been generated. Cannot generate more. ---
+--- Returning all available samples. ---
+Got 3731 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('F1', 0.59), ('F10', 1.3)) -> Label: [('H1', 1)]
+Sample 2: Features: (('F1', 0.41), ('F10', 1.9)) -> Label: [('H1', 1)]
+Sample 3: Features: (('F1', 0.19), ('F10', 3.4)) -> Label: [('H1', 1)]
+Sample 4: Features: (('F1', 0.14), ('F10', 3.4)) -> Label: [('H1', 1)]
+Sample 5: Features: (('F1', 0.51), ('F10', 1.5)) -> Label: [('H1', 1)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 14
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 14
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Max Sat...
+Total cost:3808
+['F1', 'F10']
+SatSamples :3067
+explainibilityReward: 1862
+correctnessReward: 3067
+experiments/theorem_prover//
+Extracting program from witness...
+6: F1
+3: F1
+1: F1
+(6,3) -> H1_1
+(6,2) -> H1_1
+(6,1) -> H1_1
+(6,0) -> H1_0
+(5,2) -> H1_1
+(5,1) -> H1_1
+(5,0) -> H1_0
+(4,3) -> H1_1
+(4,2) -> 5
+(4,1) -> 5
+(4,0) -> 6
+(3,3) -> H1_1
+(3,2) -> H1_1
+(3,1) -> H1_1
+(3,0) -> H1_0
+(2,3) -> H1_1
+(2,2) -> H1_0
+(2,1) -> H1_0
+(2,0) -> H1_0
+(1,3) -> H1_1
+(1,2) -> H1_1
+(1,1) -> H1_1
+(1,0) -> H1_0
+(0,2) -> 1
+(0,1) -> 6
+(0,0) -> 3
+0: F10
+Synthesized program: experiments/theorem_prover//program/program_ms_0_100_0_erm.py
+Visualization: experiments/theorem_prover//program/program_ms_0_100_0_erm.dot
+Synthesis time:2.068477924010949
+Accuracy:0.8220316269096757 (3067/3731)
+Explainability: 0.49906191369606
+Adding region (0,49,0.8220316269096757)
+Adding region (49,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/theorem_prover//program/program_ms_0_100_0_erm.py', 0.8220316269096757, 0.49906191369606)]
+
+
+--- Standard Error (stderr) ---
+2025-11-24 16:15:26.395127: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-24 16:15:26.396642: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-24 16:15:26.423855: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-24 16:15:26.423885: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-24 16:15:26.425111: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-24 16:15:26.429771: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-24 16:15:26.429918: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-24 16:15:26.883164: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT

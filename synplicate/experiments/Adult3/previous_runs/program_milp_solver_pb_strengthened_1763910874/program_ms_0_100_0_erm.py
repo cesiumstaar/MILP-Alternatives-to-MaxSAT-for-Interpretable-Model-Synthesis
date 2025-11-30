@@ -1,0 +1,36 @@
+import sys
+sys.path.insert(0,"experiments/Adult3//")
+import feature_defs
+
+def execute(inputs):
+	program_nodes ={}
+	program_nodes["0"]= "workclass"
+
+	program_edges ={}
+	program_edges[("0",8)]= "income_1"
+	program_edges[("0",7)]= "income_1"
+	program_edges[("0",6)]= "income_0"
+	program_edges[("0",5)]= "income_0"
+	program_edges[("0",4)]= "income_0"
+	program_edges[("0",3)]= "income_0"
+	program_edges[("0",2)]= "income_0"
+	program_edges[("0",1)]= "income_0"
+	program_edges[("0",0)]= "income_0"
+
+	features = feature_defs.retrieve_feature_defs()
+
+	value_map = {} 
+	value_map["workclass"] = features["workclass"]([("age",inputs[0]),("hours_per_week",inputs[1]),("workclass",inputs[2])])
+
+	flag = True
+	current_node = "0"
+	while flag:
+		current_feature = program_nodes[current_node]
+		next_node = program_edges[current_node,value_map[current_feature]]
+		if next_node.isdigit():
+			current_node = next_node
+		else:
+			current_node = next_node
+			flag = False
+	return current_node
+

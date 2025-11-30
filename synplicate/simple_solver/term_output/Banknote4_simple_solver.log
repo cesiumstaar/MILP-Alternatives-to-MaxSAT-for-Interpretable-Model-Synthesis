@@ -1,0 +1,21 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Banknote4/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- Found cache file 'experiments/Banknote4/sampler_cache_banknote_4_features.pkl'. Loading data. ---
+Explored 4 features to find a single-node classifier.
+Best feature: variance
+Synthesized program: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Banknote4/program/program_simple_variance.py
+Visualization: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Banknote4/program/program_simple_variance.dot
+Image stored at: /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/Banknote4_program_simple_variance_1763959190.png
+Synthesis time:0.6060636043548584
+Accuracy:0.7880250456561441 (24164/30664)
+Explainability: 1.0
+Total cost:6500.000000000002
+correctnessReward: 24164
+explainibilityReward: 30664
+
+
+--- Standard Error (stderr) ---

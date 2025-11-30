@@ -1,0 +1,30 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- Found cache file 'experiments/theorem_prover/sampler_cache_theorem_prover.pkl'. Loading samples. ---
+Explored 2 features to find a single-node classifier.
+Best feature: F1
+Synthesized program: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/program/program_simple_F1.py
+Visualization: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/program/program_simple_F1.dot
+Image stored at: /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/theorem_prover_program_simple_F1_1763917800.png
+Synthesis time:1.1878995895385742
+Accuracy:0.88 (88/100)
+Explainability: 1.0
+Total cost:12.00000000000001
+correctnessReward: 88
+explainibilityReward: 100
+
+
+--- Standard Error (stderr) ---
+2025-11-23 22:39:59.748227: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 22:39:59.749755: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 22:39:59.772304: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 22:39:59.772332: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 22:39:59.773098: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 22:39:59.777108: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 22:39:59.777249: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 22:40:00.194201: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT

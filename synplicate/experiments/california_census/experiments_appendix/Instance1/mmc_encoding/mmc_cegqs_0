@@ -1,0 +1,67 @@
+BC1.1
+phi_Gamma_val := 
+F|
+( T & population_P3534100 & median_income_P513 & Class_P0)|
+( T & population_P3227600 & median_income_P268 & Class_P100)|
+( T & population_P2683700 & median_income_P893 & Class_P100)|
+( T & population_P1607400 & median_income_P741 & Class_P100)|
+( T & population_P1075000 & median_income_P1011 & Class_P100)|
+( T & population_P342100 & median_income_P1330 & Class_P0)|
+( T & population_P3309500 & median_income_P774 & Class_P0)|
+( T & population_P2201400 & median_income_P1182 & Class_P100)|
+( T & population_P1339700 & median_income_P585 & Class_P100)|
+( T & population_P2632300 & median_income_P85 & Class_P100);
+
+phi_Gamma_det := 
+T &
+(T & (population_P3534100 => (T & !population_P3227600 & !population_P2683700 & !population_P1607400 & !population_P1075000 & !population_P342100 & !population_P3309500 & !population_P2201400 & !population_P1339700 & !population_P2632300)) & (population_P3227600 => (T & !population_P2683700 & !population_P1607400 & !population_P1075000 & !population_P342100 & !population_P3309500 & !population_P2201400 & !population_P1339700 & !population_P2632300)) & (population_P2683700 => (T & !population_P1607400 & !population_P1075000 & !population_P342100 & !population_P3309500 & !population_P2201400 & !population_P1339700 & !population_P2632300)) & (population_P1607400 => (T & !population_P1075000 & !population_P342100 & !population_P3309500 & !population_P2201400 & !population_P1339700 & !population_P2632300)) & (population_P1075000 => (T & !population_P342100 & !population_P3309500 & !population_P2201400 & !population_P1339700 & !population_P2632300)) & (population_P342100 => (T & !population_P3309500 & !population_P2201400 & !population_P1339700 & !population_P2632300)) & (population_P3309500 => (T & !population_P2201400 & !population_P1339700 & !population_P2632300)) & (population_P2201400 => (T & !population_P1339700 & !population_P2632300)) & (population_P1339700 => (T & !population_P2632300)) & (population_P2632300 => (T))) &
+(T & (median_income_P513 => (T & !median_income_P268 & !median_income_P893 & !median_income_P741 & !median_income_P1011 & !median_income_P1330 & !median_income_P774 & !median_income_P1182 & !median_income_P585 & !median_income_P85)) & (median_income_P268 => (T & !median_income_P893 & !median_income_P741 & !median_income_P1011 & !median_income_P1330 & !median_income_P774 & !median_income_P1182 & !median_income_P585 & !median_income_P85)) & (median_income_P893 => (T & !median_income_P741 & !median_income_P1011 & !median_income_P1330 & !median_income_P774 & !median_income_P1182 & !median_income_P585 & !median_income_P85)) & (median_income_P741 => (T & !median_income_P1011 & !median_income_P1330 & !median_income_P774 & !median_income_P1182 & !median_income_P585 & !median_income_P85)) & (median_income_P1011 => (T & !median_income_P1330 & !median_income_P774 & !median_income_P1182 & !median_income_P585 & !median_income_P85)) & (median_income_P1330 => (T & !median_income_P774 & !median_income_P1182 & !median_income_P585 & !median_income_P85)) & (median_income_P774 => (T & !median_income_P1182 & !median_income_P585 & !median_income_P85)) & (median_income_P1182 => (T & !median_income_P585 & !median_income_P85)) & (median_income_P585 => (T & !median_income_P85)) & (median_income_P85 => (T))) &
+(T & (Class_P0 => (T & !Class_P100)) & (Class_P100 => (T)));
+
+phi_Gamma :=  phi_Gamma_val & phi_Gamma_det;
+
+phi_T_feature_det :=
+T &
+(F | (lam_0_population & !lam_0_median_income) | (lam_0_median_income & !lam_0_population));
+
+phi_T_transitions := 
+T & 
+(lam_0_population =>
+          (T &
+          (F | (T & (F | (tau_0_0_Class_0 & (T & !tau_0_0_Class_1 & !tau_0_0_Class_2 & !tau_0_0_Class_3)) | (tau_0_0_Class_1 & (T & !tau_0_0_Class_0 & !tau_0_0_Class_2 & !tau_0_0_Class_3)) | (tau_0_0_Class_2 & (T & !tau_0_0_Class_0 & !tau_0_0_Class_1 & !tau_0_0_Class_3)) | (tau_0_0_Class_3 & (T & !tau_0_0_Class_0 & !tau_0_0_Class_1 & !tau_0_0_Class_2))))) &
+          (F | (T & (F | (tau_0_1_Class_0 & (T & !tau_0_1_Class_1 & !tau_0_1_Class_2 & !tau_0_1_Class_3)) | (tau_0_1_Class_1 & (T & !tau_0_1_Class_0 & !tau_0_1_Class_2 & !tau_0_1_Class_3)) | (tau_0_1_Class_2 & (T & !tau_0_1_Class_0 & !tau_0_1_Class_1 & !tau_0_1_Class_3)) | (tau_0_1_Class_3 & (T & !tau_0_1_Class_0 & !tau_0_1_Class_1 & !tau_0_1_Class_2))))) &
+          (F | (T & (F | (tau_0_2_Class_0 & (T & !tau_0_2_Class_1 & !tau_0_2_Class_2 & !tau_0_2_Class_3)) | (tau_0_2_Class_1 & (T & !tau_0_2_Class_0 & !tau_0_2_Class_2 & !tau_0_2_Class_3)) | (tau_0_2_Class_2 & (T & !tau_0_2_Class_0 & !tau_0_2_Class_1 & !tau_0_2_Class_3)) | (tau_0_2_Class_3 & (T & !tau_0_2_Class_0 & !tau_0_2_Class_1 & !tau_0_2_Class_2))))) &
+          (F | (T & (F | (tau_0_3_Class_0 & (T & !tau_0_3_Class_1 & !tau_0_3_Class_2 & !tau_0_3_Class_3)) | (tau_0_3_Class_1 & (T & !tau_0_3_Class_0 & !tau_0_3_Class_2 & !tau_0_3_Class_3)) | (tau_0_3_Class_2 & (T & !tau_0_3_Class_0 & !tau_0_3_Class_1 & !tau_0_3_Class_3)) | (tau_0_3_Class_3 & (T & !tau_0_3_Class_0 & !tau_0_3_Class_1 & !tau_0_3_Class_2))))))) & 
+(lam_0_median_income =>
+          (T &
+          (F | (T & (F | (tau_0_0_Class_0 & (T & !tau_0_0_Class_1 & !tau_0_0_Class_2 & !tau_0_0_Class_3)) | (tau_0_0_Class_1 & (T & !tau_0_0_Class_0 & !tau_0_0_Class_2 & !tau_0_0_Class_3)) | (tau_0_0_Class_2 & (T & !tau_0_0_Class_0 & !tau_0_0_Class_1 & !tau_0_0_Class_3)) | (tau_0_0_Class_3 & (T & !tau_0_0_Class_0 & !tau_0_0_Class_1 & !tau_0_0_Class_2))))) &
+          (F | (T & (F | (tau_0_1_Class_0 & (T & !tau_0_1_Class_1 & !tau_0_1_Class_2 & !tau_0_1_Class_3)) | (tau_0_1_Class_1 & (T & !tau_0_1_Class_0 & !tau_0_1_Class_2 & !tau_0_1_Class_3)) | (tau_0_1_Class_2 & (T & !tau_0_1_Class_0 & !tau_0_1_Class_1 & !tau_0_1_Class_3)) | (tau_0_1_Class_3 & (T & !tau_0_1_Class_0 & !tau_0_1_Class_1 & !tau_0_1_Class_2)))))));
+
+phi_T_transitions_consistency :=
+T &
+(lam_0_population => (T)) &
+(lam_0_median_income => (T & !tau_0_2_Class_0 & !tau_0_2_Class_1 & !tau_0_2_Class_2 & !tau_0_2_Class_3 & !tau_0_3_Class_0 & !tau_0_3_Class_1 & !tau_0_3_Class_2 & !tau_0_3_Class_3));
+
+phi_T := phi_T_feature_det & phi_T_transitions & phi_T_transitions_consistency;
+
+phi_sim_leaves :=
+T &
+(pi_Class_0 == (F | (T & Class_P0) | (T & Class_P0) | (T & Class_P0))) &
+(pi_Class_1 == (F | (T & Class_P100) | (T & Class_P100) | (T & Class_P100) | (T & Class_P100) | (T & Class_P100) | (T & Class_P100) | (T & Class_P100))) &
+(pi_Class_2 == (F)) &
+(pi_Class_3 == (F));
+
+phi_sim_transition :=
+T &
+(pi_0 == (F | 
+         (lam_0_population & (F | (T & population_P3534100 & median_income_P513) | (T & population_P3227600 & median_income_P268) | (T & population_P2683700 & median_income_P893) | (T & population_P3309500 & median_income_P774) | (T & population_P2201400 & median_income_P1182) | (T & population_P2632300 & median_income_P85)) & (T & (tau_0_0_Class_0 => pi_Class_0) & (tau_0_0_Class_1 => pi_Class_1) & (tau_0_0_Class_2 => pi_Class_2) & (tau_0_0_Class_3 => pi_Class_3))) | 
+         (lam_0_population & (F) & (T & (tau_0_1_Class_0 => pi_Class_0) & (tau_0_1_Class_1 => pi_Class_1) & (tau_0_1_Class_2 => pi_Class_2) & (tau_0_1_Class_3 => pi_Class_3))) | 
+         (lam_0_population & (F | (T & population_P342100 & median_income_P1330)) & (T & (tau_0_2_Class_0 => pi_Class_0) & (tau_0_2_Class_1 => pi_Class_1) & (tau_0_2_Class_2 => pi_Class_2) & (tau_0_2_Class_3 => pi_Class_3))) | 
+         (lam_0_population & (F | (T & population_P1607400 & median_income_P741) | (T & population_P1075000 & median_income_P1011) | (T & population_P1339700 & median_income_P585)) & (T & (tau_0_3_Class_0 => pi_Class_0) & (tau_0_3_Class_1 => pi_Class_1) & (tau_0_3_Class_2 => pi_Class_2) & (tau_0_3_Class_3 => pi_Class_3))) | 
+         (lam_0_median_income & (F | (T & population_P2683700 & median_income_P893) | (T & population_P1607400 & median_income_P741) | (T & population_P1075000 & median_income_P1011) | (T & population_P342100 & median_income_P1330) | (T & population_P3309500 & median_income_P774) | (T & population_P2201400 & median_income_P1182)) & (T & (tau_0_0_Class_0 => pi_Class_0) & (tau_0_0_Class_1 => pi_Class_1) & (tau_0_0_Class_2 => pi_Class_2) & (tau_0_0_Class_3 => pi_Class_3))) | 
+         (lam_0_median_income & (F | (T & population_P3534100 & median_income_P513) | (T & population_P3227600 & median_income_P268) | (T & population_P1339700 & median_income_P585) | (T & population_P2632300 & median_income_P85)) & (T & (tau_0_1_Class_0 => pi_Class_0) & (tau_0_1_Class_1 => pi_Class_1) & (tau_0_1_Class_2 => pi_Class_2) & (tau_0_1_Class_3 => pi_Class_3)))));
+
+phi_sim := pi_0 & phi_sim_leaves & phi_sim_transition;
+
+FORMULA := phi_Gamma & phi_T & phi_sim;
+ASSIGN FORMULA;

@@ -1,0 +1,13 @@
+{
+  "feature": "F10",
+  "accuracy": 0.84,
+  "explainability": 1.0,
+  "correct": 84,
+  "samples": 100,
+  "cost": 16.000000000000014,
+  "correctnessReward": 84,
+  "explainibilityReward": 100,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/program/program_simple_F10.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/program/program_simple_F10.dot",
+  "png": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/program/program_simple_F10.png"
+}

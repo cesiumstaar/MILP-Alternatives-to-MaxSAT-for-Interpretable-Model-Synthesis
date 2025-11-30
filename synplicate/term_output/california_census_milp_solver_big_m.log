@@ -1,0 +1,140 @@
+--- Command ---
+python3 synplicate.py experiments/california_census/ --solver=milp_solver_big_m
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+population:4:1,
+median_income:2:1
+experiments/california_census//
+(3, {'population': 4, 'median_income': 2}, {'population': 1, 'median_income': 1}, {'Class': 4}, {'population': <function population at 0x717599390d30>, 'median_income': <function median_income at 0x717599390e50>, 'Class': <function Class at 0x717599390ee0>}, False)
+Using 22667 samples ...
+--- Found cache file 'experiments/california_census/sampler_cache_tf.pkl'. Loading samples. ---
+Got 22667 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('population', 3242), ('median_income', 6.880877491963801)) -> Label: [('Class', 3)]
+Sample 2: Features: (('population', 10987), ('median_income', 2.6171930691035135)) -> Label: [('Class', 1)]
+Sample 3: Features: (('population', 17291), ('median_income', 8.285122684018337)) -> Label: [('Class', 1)]
+Sample 4: Features: (('population', 21052), ('median_income', 8.929463325139134)) -> Label: [('Class', 1)]
+Sample 5: Features: (('population', 18301), ('median_income', 2.292986700996349)) -> Label: [('Class', 1)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 6
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 6
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_big_m
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 2425 rows, 885 columns and 5606 nonzeros (Min)
+Model fingerprint: 0x6373e766
+Model has 25 linear objective coefficients
+Variable types: 0 continuous, 885 integer (885 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [6e+00, 8e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 1540 rows and 677 columns
+Presolve time: 0.04s
+Presolved: 885 rows, 208 columns, 2832 nonzeros
+Variable types: 0 continuous, 208 integer (208 binary)
+Found heuristic solution: objective 30284.000000
+Found heuristic solution: objective 26506.000000
+
+Root relaxation: objective 2.644100e+04, 165 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 26441.0000    0   72 26506.0000 26441.0000  0.25%     -    0s
+     0     0 26444.0000    0   63 26506.0000 26444.0000  0.23%     -    0s
+H    0     0                    26500.000000 26444.0000  0.21%     -    0s
+H    0     0                    26488.000000 26444.0000  0.17%     -    0s
+     0     0 26461.0000    0   41 26488.0000 26461.0000  0.10%     -    0s
+     0     0 26464.0000    0   51 26488.0000 26464.0000  0.09%     -    0s
+     0     0 26464.0000    0   52 26488.0000 26464.0000  0.09%     -    0s
+     0     0 26470.0000    0   58 26488.0000 26470.0000  0.07%     -    0s
+     0     0 26473.0000    0   64 26488.0000 26473.0000  0.06%     -    0s
+     0     0 26473.0000    0   61 26488.0000 26473.0000  0.06%     -    0s
+     0     0 26473.0000    0   61 26488.0000 26473.0000  0.06%     -    0s
+     0     0 26474.5000    0   45 26488.0000 26474.5000  0.05%     -    0s
+     0     0 26482.0000    0   60 26488.0000 26482.0000  0.02%     -    0s
+     0     0 26482.0000    0   49 26488.0000 26482.0000  0.02%     -    0s
+     0     0 26488.0000    0   61 26488.0000 26488.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Cover: 8
+  Implied bound: 14
+  Clique: 15
+  MIR: 6
+  Zero half: 26
+  RLT: 13
+  Relax-and-lift: 3
+  BQP: 2
+
+Explored 1 nodes (748 simplex iterations) in 0.11 seconds (0.10 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 26488 26500 26506 30284 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.648800000000e+04, best bound 2.648800000000e+04, gap 0.0000%
+Total cost:26488.0
+['population', 'median_income']
+SatSamples :11970
+explainibilityReward: 18887
+correctnessReward: 11970
+experiments/california_census//
+Extracting program from witness...
+(2,3) -> Class_3
+(2,2) -> Class_0
+(2,1) -> Class_1
+(2,0) -> Class_2
+(1,1) -> Class_2
+(1,0) -> Class_2
+(0,3) -> Class_1
+(0,2) -> Class_0
+(0,1) -> Class_3
+(0,0) -> Class_0
+0: population
+Synthesized program: experiments/california_census//program/program_ms_0_100_0_erm.py
+Visualization: experiments/california_census//program/program_ms_0_100_0_erm.dot
+Synthesis time:4.493793765985174
+Accuracy:0.5280804694048616 (11969/22667)
+Explainability: 0.8332377465037278
+Adding region (0,83,0.5280804694048616)
+Adding region (83,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/california_census//program/program_ms_0_100_0_erm.py', 0.5280804694048616, 0.8332377465037278)]
+
+
+--- Standard Error (stderr) ---
+2025-11-23 20:35:07.463793: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 20:35:07.465370: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 20:35:07.493835: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 20:35:07.493874: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 20:35:07.494837: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 20:35:07.499720: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 20:35:07.499875: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 20:35:08.014166: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT

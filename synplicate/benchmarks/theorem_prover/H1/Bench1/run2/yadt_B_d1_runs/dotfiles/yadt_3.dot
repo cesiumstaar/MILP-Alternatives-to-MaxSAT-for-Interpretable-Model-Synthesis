@@ -1,0 +1,11 @@
+digraph YaDT {
+n0 [ shape=box, label="F1\n"]
+n0 -> n1 [label="0"]
+n1 [ shape=ellipse, label="0\n(24/4.8)"]
+n0 -> n2 [label="1"]
+n2 [ shape=ellipse, label="1\n(6/2.3)"]
+n0 -> n3 [label="2"]
+n3 [ shape=ellipse, label="1\n(9/1.2)"]
+n0 -> n4 [label="3"]
+n4 [ shape=ellipse, label="1\n(29/10.2)"]
+}

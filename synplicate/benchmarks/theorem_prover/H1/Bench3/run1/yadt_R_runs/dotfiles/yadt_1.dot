@@ -1,0 +1,15 @@
+digraph YaDT {
+n0 [ shape=box, label="F10\n"]
+n0 -> n1 [label="<=2.900000"]
+n1 [ shape=box, label="F1\n"]
+n1 -> n2 [label="<=0.710000"]
+n2 [ shape=ellipse, label="0\n(10/1.2)"]
+n1 -> n3 [label=">0.710000"]
+n3 [ shape=box, label="F1\n"]
+n3 -> n4 [label="<=0.990000"]
+n4 [ shape=ellipse, label="1\n(6/2.3)"]
+n3 -> n5 [label=">0.990000"]
+n5 [ shape=ellipse, label="0\n(5/1.2)"]
+n0 -> n8 [label=">2.900000"]
+n8 [ shape=ellipse, label="1\n(15/2.4)"]
+}

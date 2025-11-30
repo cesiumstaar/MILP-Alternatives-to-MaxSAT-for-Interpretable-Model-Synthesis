@@ -1,0 +1,158 @@
+Processing config.mmc ...
+Processing 3 runs ...
+ + Run 1 
+   + Total 10 iterations
+   + Iteration 0:
+     + YaDT: 1 decision node(s)
+             Train MissRate: 15% of 20
+             Test MissRate : 31.6667% of 180
+             0.006692000000000001s (read:0.006603s, tree build:7.4e-05s, tree prune:1.5e-05s)
+   + Iteration 1:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 11.1111% of 36
+             Test MissRate : 18.894% of 217
+             0.000922s (read:0.000833s, tree build:7.5e-05s, tree prune:1.4e-05s)
+   + Iteration 2:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 11.5385% of 52
+             Test MissRate : 12.2047% of 254
+             0.0015309999999999998s (read:0.000808s, tree build:0.000704s, tree prune:1.9e-05s)
+   + Iteration 3:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 10.2941% of 68
+             Test MissRate : 12.5% of 296
+             0.0014819999999999998s (read:0.000906s, tree build:0.000557s, tree prune:1.9e-05s)
+   + Iteration 4:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 10.7143% of 84
+             Test MissRate : 11.7117% of 333
+             0.0014839999999999999s (read:0.000797s, tree build:0.000666s, tree prune:2.1e-05s)
+   + Iteration 5:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 10% of 100
+             Test MissRate : 11.7801% of 382
+             0.001482s (read:0.000905s, tree build:0.000563s, tree prune:1.4e-05s)
+   + Iteration 6:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 9.48276% of 116
+             Test MissRate : 11.7925% of 424
+             0.001734s (read:0.001061s, tree build:0.000652s, tree prune:2.1e-05s)
+   + Iteration 7:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 10.6061% of 132
+             Test MissRate : 13.8004% of 471
+             0.001708s (read:0.000839s, tree build:0.000849s, tree prune:2e-05s)
+   + Iteration 8:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 11.4865% of 148
+             Test MissRate : 13.8402% of 513
+             0.0019579999999999997s (read:0.001249s, tree build:0.000677s, tree prune:3.2e-05s)
+   + Iteration 9:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 11.5854% of 164
+             Test MissRate : 14.795% of 561
+             0.001785s (read:0.001037s, tree build:0.000723s, tree prune:2.5e-05s)
+ + Run 2 
+   + Total 10 iterations
+   + Iteration 0:
+     + YaDT: 0 decision node(s)
+             Train MissRate: 35% of 20
+             Test MissRate : 60.5556% of 180
+             0.0008820000000000001s (read:0.000773s, tree build:9.1e-05s, tree prune:1.8e-05s)
+   + Iteration 1:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 19.4444% of 36
+             Test MissRate : 15.7895% of 228
+             0.000897s (read:0.000829s, tree build:5.5e-05s, tree prune:1.3e-05s)
+   + Iteration 2:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 17.3077% of 52
+             Test MissRate : 15% of 260
+             0.001345s (read:0.000782s, tree build:0.000542s, tree prune:2.1e-05s)
+   + Iteration 3:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 14.7059% of 68
+             Test MissRate : 15.2597% of 308
+             0.001526s (read:0.000826s, tree build:0.000682s, tree prune:1.8e-05s)
+   + Iteration 4:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 14.2857% of 84
+             Test MissRate : 15.942% of 345
+             0.0015480000000000001s (read:0.000973s, tree build:0.000555s, tree prune:2e-05s)
+   + Iteration 5:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 13% of 100
+             Test MissRate : 16.2304% of 382
+             0.0013759999999999998s (read:0.000798s, tree build:0.000551s, tree prune:2.7e-05s)
+   + Iteration 6:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 13.7931% of 116
+             Test MissRate : 16.7064% of 419
+             0.001846s (read:0.000854s, tree build:0.000971s, tree prune:2.1e-05s)
+   + Iteration 7:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 13.6364% of 132
+             Test MissRate : 16.408% of 451
+             0.0016829999999999998s (read:0.000899s, tree build:0.00075s, tree prune:3.4e-05s)
+   + Iteration 8:
+     + YaDT: 3 decision node(s)
+             Train MissRate: 12.8378% of 148
+             Test MissRate : 14.17% of 494
+             0.001547s (read:0.000811s, tree build:0.000695s, tree prune:4.1e-05s)
+   + Iteration 9:
+     + YaDT: 3 decision node(s)
+             Train MissRate: 12.1951% of 164
+             Test MissRate : 14.7388% of 536
+             0.0015919999999999999s (read:0.000829s, tree build:0.000735s, tree prune:2.8e-05s)
+ + Run 3 
+   + Total 10 iterations
+   + Iteration 0:
+     + YaDT: 1 decision node(s)
+             Train MissRate: 15.7895% of 19
+             Test MissRate : 29.2398% of 171
+             0.000864s (read:0.000766s, tree build:8.4e-05s, tree prune:1.4e-05s)
+   + Iteration 1:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 14.2857% of 35
+             Test MissRate : 23.4742% of 213
+             0.000919s (read:0.000802s, tree build:9.4e-05s, tree prune:2.3e-05s)
+   + Iteration 2:
+     + YaDT: 4 decision node(s)
+             Train MissRate: 7.84314% of 51
+             Test MissRate : 9.01961% of 255
+             0.0024779999999999997s (read:0.001425s, tree build:0.001031s, tree prune:2.2e-05s)
+   + Iteration 3:
+     + YaDT: 3 decision node(s)
+             Train MissRate: 7.46269% of 67
+             Test MissRate : 9.58904% of 292
+             0.007511s (read:0.000776s, tree build:0.006713s, tree prune:2.2e-05s)
+   + Iteration 4:
+     + YaDT: 4 decision node(s)
+             Train MissRate: 8.43373% of 83
+             Test MissRate : 11.0778% of 334
+             0.001756s (read:0.00107s, tree build:0.000671s, tree prune:1.5e-05s)
+   + Iteration 5:
+     + YaDT: 4 decision node(s)
+             Train MissRate: 7.07071% of 99
+             Test MissRate : 11.0512% of 371
+             0.00391s (read:0.003229s, tree build:0.000649s, tree prune:3.2e-05s)
+   + Iteration 6:
+     + YaDT: 4 decision node(s)
+             Train MissRate: 7.82609% of 115
+             Test MissRate : 10.4116% of 413
+             0.001765s (read:0.001079s, tree build:0.00066s, tree prune:2.6e-05s)
+   + Iteration 7:
+     + YaDT: 3 decision node(s)
+             Train MissRate: 7.63359% of 131
+             Test MissRate : 10.1099% of 455
+             0.0015379999999999999s (read:0.00083s, tree build:0.000692s, tree prune:1.6e-05s)
+   + Iteration 8:
+     + YaDT: 3 decision node(s)
+             Train MissRate: 7.48299% of 147
+             Test MissRate : 9.62672% of 509
+             0.001591s (read:0.000963s, tree build:0.000605s, tree prune:2.3e-05s)
+   + Iteration 9:
+     + YaDT: 3 decision node(s)
+             Train MissRate: 7.97546% of 163
+             Test MissRate : 9.52381% of 546
+             0.001702s (read:0.000837s, tree build:0.000844s, tree prune:2.1e-05s)

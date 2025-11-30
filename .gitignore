@@ -1,0 +1,17 @@
+# Python virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Synplicate generated output directories
+**/maxsat_encoding/
+**/program/
+**/samples/
+
+# Sampler cache files
+*.pkl
+
+# Results files
+results.csv

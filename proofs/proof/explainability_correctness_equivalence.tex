@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\begin{document}
+\title{Equality of Maximum Explainability and Correctness Weights}
+\author{Automation Proof}
+\date{\today}
+\maketitle
+\section*{Goal}
+We show that the Max-SAT encoding sets the maximum correctness weight equal to the maximum explainability weight. Equality is required so the combined objective explores Pareto points without scaling bias.
+\section*{Setup}
+Let $W_{\text{expl}}$ be the multiset of explainability weights and $W_{\text{corr}}$ the multiset of correctness weights.
+The encoder builds $W_{\text{expl}}$ from two families of literals:
+\begin{itemize}
+  \item Feature-use literals $\texttt{lamp}_{n,f}$ for every node $n$ and feature $f$, with weight taken directly from the user-supplied feature weight map.
+  \item Reachability literals $\texttt{used\_node}_n$ for every node $n$, each assigned weight $\max(\text{feature weights})+1$.
+\end{itemize}
+The map of explainability weights is normalized relative to the estimated maximum explanation score and the sample count, but the normalization is applied uniformly across all explainability literals.
+\section*{Derivation of $\max W_{\text{expl}}$}
+Lines 318--344 of \texttt{dd\_encoder.py} construct the weight map $\mathcal{W}$ by inserting every $\texttt{lamp}_{n,f}$ weight and setting each $\texttt{used\_node}_n$ weight to $\max(\text{feature weights})+1$, followed by uniform normalization. Consequently,
+\[
+\max W_{\text{expl}} = \max\bigl\{\mathcal{W}[v] : v \in \{\texttt{lamp}, \texttt{used\_node}\}\bigr\}.
+\]
+Because $\max(\text{feature weights})+1$ dominates any feature weight prior to normalization, the normalized maximum explainability weight is $\max W_{\text{expl}} = \mathcal{W}[\texttt{used\_node}_n]$ for every node $n$.
+\section*{Assignment of Correctness Weights}
+During DIMACS parsing (lines 505--536), each correctness literal $\texttt{match\_0}$ is given weight $\max W_{\text{expl}}$. Since no correctness literal appears in $\mathcal{W}$, the ``else'' branch is taken and assigns
+\[
+\forall c \in W_{\text{corr}}:\quad w(c) = \max W_{\text{expl}}.
+\]
+Thus every correctness weight equals the maximum explainability weight.
+\section*{Equality Proof}
+From the construction above, $\max W_{\text{corr}} = \max W_{\text{expl}}$ because correctness literals receive $\max W_{\text{expl}}$ exactly, and no larger weight exists in $W_{\text{corr}}$ or $W_{\text{expl}}$ after normalization. Therefore the solver's soft-clause weights are scale-balanced, ensuring the combined score corresponds to a Pareto-optimal point.
+
+\section*{Why dominated points can still surface}
+Equalizing the maxima of $W_{\text{expl}}$ and $W_{\text{corr}}$ only guarantees that the Max-SAT objective does not overweight one family of soft clauses. Pareto-optimality is established by how synthesized solutions are filtered after solving. In the current implementation, each invocation of the PAC loop in \texttt{erm\_procedure.py} returns a single solution for the explored region and immediately clears the worklist (the debugging line \texttt{W = []}), so solutions found with different solvers or runs are never compared against one another. When you place the outcomes side by side (e.g., $(0.68, 0.83)$ from the default solver versus $(0.55, 0.83)$ from \texttt{milp\_solver\_naive}), the lower-accuracy point is dominated but was never eliminated because it was produced in a separate run. To ensure only true Pareto points are reported across solver configurations, aggregate all synthesized programs and explicitly discard any entry whose accuracy and explainability are both no better than another's.
+\end{document}

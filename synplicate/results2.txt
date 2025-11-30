@@ -1,0 +1,64 @@
+--- Synplicate Experiment Runner (Linear View) ---
+
+Experiment: theorem_prover
+  - default: time=1.71s, cost=3808, acc=0.91, exp=0.50, corR=3392, expR=1862
+  - milp_solver_naive_old: time=10.09s, cost=3808, acc=0.77, exp=0.50, corR=2877, expR=1862
+  - milp_solver_naive: time=10.53s, cost=3808, acc=0.81, exp=0.50, corR=3040, expR=1862
+  - milp_solver_big_m: time=11.11s, cost=3808, acc=0.82, exp=0.50, corR=3067, expR=1862
+  - milp_solver_extended_formulation: time=11.26s, cost=3808, acc=0.85, exp=0.50, corR=3172, expR=1862
+  - milp_solver_pb_strengthened: time=12.07s, cost=3808, acc=0.82, exp=0.50, corR=3067, expR=1862
+  - milp_solver_quadratic: time=10.64s, cost=3808, acc=0.82, exp=0.50, corR=3067, expR=1862
+
+Experiment: california_census
+  - default: time=4.35s, cost=22710, acc=0.64, exp=0.50, corR=14570, expR=11331
+  - milp_solver_naive_old: time=4.60s, cost=22710, acc=0.79, exp=0.50, corR=17971, expR=11331
+  - milp_solver_naive: time=4.60s, cost=22710, acc=0.68, exp=0.50, corR=15371, expR=11331
+  - milp_solver_big_m: time=4.51s, cost=22710, acc=0.77, exp=0.50, corR=17556, expR=11331
+  - milp_solver_extended_formulation: time=4.63s, cost=22710, acc=0.70, exp=0.50, corR=15947, expR=11331
+  - milp_solver_pb_strengthened: time=4.61s, cost=22710, acc=0.53, exp=0.50, corR=11970, expR=11331
+  - milp_solver_quadratic: time=4.56s, cost=22710, acc=0.55, exp=0.50, corR=12546, expR=11331
+
+Experiment: Iris3
+  - default: time=9.47s, cost=30897, acc=0.70, exp=0.56, corR=17540, expR=13902
+  - milp_solver_naive_old: time=10.51s, cost=30897, acc=0.59, exp=0.56, corR=14717, expR=13902
+  - milp_solver_naive: time=10.67s, cost=30897, acc=0.64, exp=0.56, corR=16089, expR=13902
+  - milp_solver_big_m: time=10.20s, cost=30897, acc=0.70, exp=0.56, corR=17540, expR=13902
+  - milp_solver_extended_formulation: time=11.00s, cost=30897, acc=0.60, exp=0.56, corR=15022, expR=13902
+  - milp_solver_pb_strengthened: time=10.15s, cost=30897, acc=0.61, exp=0.56, corR=15236, expR=13902
+  - milp_solver_quadratic: time=10.87s, cost=30897, acc=0.67, exp=0.56, corR=16687, expR=13902
+
+Experiment: Banknote3
+  - default: time=17.11s, cost=37101, acc=0.81, exp=0.50, corR=19935, expR=12309
+  - milp_solver_naive_old: time=12.33s, cost=37101, acc=0.85, exp=0.50, corR=20884, expR=12309
+  - milp_solver_naive: time=10.58s, cost=37101, acc=0.85, exp=0.50, corR=20860, expR=12309
+  - milp_solver_big_m: time=10.96s, cost=37101, acc=0.80, exp=0.50, corR=19646, expR=12309
+  - milp_solver_extended_formulation: time=11.57s, cost=37101, acc=0.85, exp=0.50, corR=20895, expR=12309
+  - milp_solver_pb_strengthened: time=10.35s, cost=37101, acc=0.77, exp=0.50, corR=18956, expR=12309
+  - milp_solver_quadratic: time=11.21s, cost=37101, acc=0.87, exp=0.50, corR=21451, expR=12309
+
+Experiment: ICML/AutoTaxi
+  - default: Skipped by user
+  - milp_solver_naive_old: time=26.27s, cost=38523, acc=0.66, exp=0.50, corR=16860, expR=12759
+  - milp_solver_naive: time=26.18s, cost=38523, acc=0.66, exp=0.50, corR=16860, expR=12759
+  - milp_solver_big_m: time=25.88s, cost=38523, acc=0.66, exp=0.50, corR=16860, expR=12759
+  - milp_solver_extended_formulation: time=26.65s, cost=38523, acc=0.66, exp=0.50, corR=16860, expR=12759
+  - milp_solver_pb_strengthened: time=25.94s, cost=38523, acc=0.66, exp=0.50, corR=16860, expR=12759
+  - milp_solver_quadratic: time=24.34s, cost=38523, acc=0.55, exp=0.50, corR=14128, expR=12759
+
+Experiment: Adult3_1
+  - default: time=46.25s, cost=38601, acc=0.47, exp=0.50, corR=12076, expR=12759
+  - milp_solver_naive_old: time=12.38s, cost=38601, acc=0.52, exp=0.50, corR=13276, expR=12759
+  - milp_solver_naive: time=12.21s, cost=38601, acc=0.59, exp=0.50, corR=15061, expR=12759
+  - milp_solver_big_m: time=13.93s, cost=38601, acc=0.72, exp=0.50, corR=18457, expR=12759
+  - milp_solver_extended_formulation: time=12.48s, cost=38601, acc=0.73, exp=0.50, corR=18708, expR=12759
+  - milp_solver_pb_strengthened: time=13.24s, cost=38601, acc=0.45, exp=0.50, corR=11538, expR=12759
+  - milp_solver_quadratic: time=13.04s, cost=38601, acc=0.65, exp=0.50, corR=16530, expR=12759
+
+Experiment: loan_acquisition
+  - default: time=207.83s, cost=61520, acc=0.81, exp=0.50, corR=24885, expR=15332
+  - milp_solver_naive_old: time=183.25s, cost=61520, acc=0.68, exp=0.50, corR=20981, expR=15332
+  - milp_solver_naive: time=193.87s, cost=61520, acc=0.68, exp=0.50, corR=20981, expR=15332
+  - milp_solver_big_m: time=222.81s, cost=61520, acc=0.68, exp=0.50, corR=20981, expR=15332
+  - milp_solver_extended_formulation: time=204.58s, cost=61520, acc=0.68, exp=0.50, corR=20981, expR=15332
+  - milp_solver_pb_strengthened: time=174.62s, cost=61520, acc=0.68, exp=0.50, corR=20981, expR=15332
+  - milp_solver_quadratic: time=178.33s, cost=61520, acc=0.68, exp=0.50, corR=20981, expR=15332

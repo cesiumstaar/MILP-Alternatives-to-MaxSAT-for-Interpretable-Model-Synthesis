@@ -1,0 +1,24 @@
+c CryptoMiniSat version 5.0.0
+c CryptoMiniSat SHA revision 0313a452295e1dcb2ab40d130afe1e7cafd4cfdf
+c CryptoMiniSat compilation env CMAKE_CXX_COMPILER = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ | CMAKE_CXX_FLAGS =  -std=c++11 -g -pthread -Wall -Wextra -Wunused -pedantic -Wsign-compare -fno-omit-frame-pointer -Wtype-limits -Wuninitialized -Wno-deprecated -Wstrict-aliasing -Wpointer-arith -Wheader-guard -Wpointer-arith -Wformat-nonliteral -Winit-self -Wparentheses -Wunreachable-code -ggdb3 -fPIC | COMPILE_DEFINES =  -DUSE_GAUSS -DUSE_PTHREADS -DUSE_M4RI | STATICCOMPILE = ON | ONLY_SIMPLE = OFF | Boost_FOUND = 1 | TBB_FOUND =  | STATS = OFF | MYSQL_FOUND =  | SQLITE3_FOUND =  | ZLIB_FOUND = FALSE | VALGRIND_FOUND = TRUE | ENABLE_TESTING = OFF | M4RI_FOUND = TRUE | SLOW_DEBUG = OFF | ENABLE_ASSERTIONS = ON | PYTHON_EXECUTABLE = /usr/local/bin/python2.7 | PYTHON_LIBRARY = /usr/lib/python2.7/config/libpython2.7.a | PYTHON_INCLUDE_DIRS = /usr/include/python2.7 | MY_TARGETS =  | compilation date time = Apr 18 2018 14:35:44
+c compiled with gcc version 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)
+Using ApproxMC to compute startIteration for UniGen
+WARNING: manually-specified pivotAC and/or tApproxMC may not be large enough to guarantee correctness of UniGen.
+Omit those arguments to use safe default values.
+ApproxMC starting from iteration 0
+BoundedSATCount looking for 74 solutions
+Num Explored: 1 ind set size: 1481
+Number of XOR hashes active: 1
+BoundedSATCount looking for 74 solutions
+Num Explored: 1 ind set size: 1481
+Number of XOR hashes active: 2
+BoundedSATCount looking for 74 solutions
+Num Explored: 2 ind set size: 1481
+Number of XOR hashes active: 4
+BoundedSATCount looking for 74 solutions
+Num Explored: 4 ind set size: 1481
+Number of XOR hashes active: 8
+BoundedSATCount looking for 74 solutions
+Num Explored: 8 ind set size: 1481
+Number of XOR hashes active: 16
+BoundedSATCount looking for 74 solutions

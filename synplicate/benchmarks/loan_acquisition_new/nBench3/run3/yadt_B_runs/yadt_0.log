@@ -1,0 +1,6 @@
+YaDT version 2.2.0 (c) S. Ruggieri 2002-2019
+Reading text data
+ + atts: 2 class: 1 weight: 0 rows: 20
+ + load time: 0.000706 secs (0.18 MiB/s, 28.32 K rows/s)
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  there must be at least two class values

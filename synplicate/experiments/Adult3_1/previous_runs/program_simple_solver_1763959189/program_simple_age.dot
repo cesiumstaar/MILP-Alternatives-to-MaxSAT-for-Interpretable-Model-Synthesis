@@ -1,0 +1,13 @@
+digraph {
+node [label=age,shape="diamond",style=""] 0
+node [label=income_<=50K,style=""] income_<=50K
+0 -> income_<=50K [label="1"]
+node [label=income_<=50K,style=""] income_<=50K
+0 -> income_<=50K [label="2"]
+node [label=income_<=50K,style=""] income_<=50K
+0 -> income_<=50K [label="0"]
+node [label=income_<=50K,style=""] income_<=50K
+0 -> income_<=50K [label="3"]
+node [label=income_<=50K,style=""] income_<=50K
+0 -> income_<=50K [label="default"]
+}

@@ -1,0 +1,5 @@
+terminate called after throwing an instance of 'Minisat::OutOfMemoryException'
+./runInferDT: line 7:  5001 Aborted                 (core dumped) ./synthesizer/InferDT/InferDT ${exp_dir}/Instance${i}/samples/erm_syn_samples.csv -v -x infer -t ${exp_dir}/Instance${i}/samples/dt_samples.csv > ${exp_dir}/InferDT/Instance${i}.out
+real 15.98
+user 13.66
+sys 2.24

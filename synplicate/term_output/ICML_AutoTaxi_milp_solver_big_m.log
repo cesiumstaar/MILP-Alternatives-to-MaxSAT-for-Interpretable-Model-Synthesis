@@ -1,0 +1,125 @@
+--- Command ---
+python3 synplicate.py experiments/ICML/AutoTaxi/ --solver=milp_solver_big_m
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+clouds:6:1,
+day_time:4:1,
+init_pos:4:1
+experiments/ICML/AutoTaxi//
+(3, {'clouds': 6, 'day_time': 4, 'init_pos': 4}, {'clouds': 1, 'day_time': 1, 'init_pos': 1}, {'alert': 2}, {'clouds': <function clouds at 0x7eda1e308e50>, 'day_time': <function day_time at 0x7eda1e308dc0>, 'init_pos': <function init_pos at 0x7eda1e308ee0>, 'alert': <function alert at 0x7eda1e308f70>}, False)
+Using 25522 samples ...
+Got 25522 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('clouds', 3.0), ('day_time', 61038.0569), ('init_pos', 2.6329)) -> Label: [('alert', 0.0)]
+Sample 2: Features: (('clouds', 5.0), ('day_time', 55776.7566), ('init_pos', 2.4257)) -> Label: [('alert', 0.0)]
+Sample 3: Features: (('clouds', 5.0), ('day_time', 86849.3461), ('init_pos', 0.4399)) -> Label: [('alert', 0.0)]
+Sample 4: Features: (('clouds', 5.0), ('day_time', 52668.9021), ('init_pos', 4.7682)) -> Label: [('alert', 1.0)]
+Sample 5: Features: (('clouds', 5.0), ('day_time', 88245.4466), ('init_pos', 7.1491)) -> Label: [('alert', 1.0)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 6
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 6
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_big_m
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 8078 rows, 2812 columns and 18751 nonzeros (Min)
+Model fingerprint: 0x4eb6445e
+Model has 101 linear objective coefficients
+Variable types: 0 continuous, 2812 integer (2812 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [6e+00, 9e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 4575 rows and 2077 columns
+Presolve time: 0.11s
+Presolved: 3503 rows, 735 columns, 11318 nonzeros
+Variable types: 0 continuous, 735 integer (735 binary)
+Found heuristic solution: objective 51309.000000
+Found heuristic solution: objective 42783.000000
+
+Root relaxation: objective 3.747152e+04, 444 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 37471.5238    0  264 42783.0000 37471.5238  12.4%     -    0s
+H    0     0                    42777.000000 42603.0000  0.41%     -    0s
+     0     0 42777.0000    0  395 42777.0000 42777.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 14
+  Implied bound: 47
+  Clique: 96
+  MIR: 5
+  Zero half: 126
+  RLT: 118
+  Relax-and-lift: 3
+  BQP: 22
+
+Explored 1 nodes (1333 simplex iterations) in 0.19 seconds (0.29 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 42777 42783 51309 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.277700000000e+04, best bound 4.277700000000e+04, gap 0.0000%
+Total cost:42777.0
+['clouds', 'day_time', 'init_pos']
+SatSamples :11362
+explainibilityReward: 21267
+correctnessReward: 11362
+experiments/ICML/AutoTaxi//
+Extracting program from witness...
+(2,5) -> alert_1
+(2,4) -> alert_1
+(2,3) -> alert_0
+(2,2) -> alert_0
+(2,1) -> alert_1
+(2,0) -> alert_0
+(1,3) -> 2
+(1,2) -> alert_0
+(1,1) -> alert_1
+(1,0) -> alert_1
+(0,5) -> alert_0
+(0,4) -> alert_0
+(0,3) -> alert_1
+(0,2) -> alert_1
+(0,1) -> alert_0
+(0,0) -> alert_0
+0: clouds
+Synthesized program: experiments/ICML/AutoTaxi//program/program_ms_0_100_0_erm.py
+Visualization: experiments/ICML/AutoTaxi//program/program_ms_0_100_0_erm.dot
+Synthesis time:8.00013159099035
+Accuracy:0.4451845466656218 (11362/25522)
+Explainability: 0.8332810908236031
+Adding region (0,83,0.4451845466656218)
+Adding region (83,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/ICML/AutoTaxi//program/program_ms_0_100_0_erm.py', 0.4451845466656218, 0.8332810908236031)]
+
+
+--- Standard Error (stderr) ---

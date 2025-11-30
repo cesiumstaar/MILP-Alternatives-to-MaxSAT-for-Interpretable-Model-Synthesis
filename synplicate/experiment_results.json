@@ -1,0 +1,86 @@
+{
+    "theorem_prover": {
+        "default": {
+            "time": 2.068477924010949,
+            "acc": 0.8220316269096757,
+            "exp": 0.49906191369606,
+            "cost": 3808.0,
+            "corR": 3067,
+            "expR": 1862
+        },
+        "milp_solver_naive": {
+            "time": 15.840979984990554,
+            "acc": 0.8147949611364246,
+            "exp": 0.49906191369606,
+            "cost": 3808.0,
+            "corR": 3040,
+            "expR": 1862
+        },
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "california_census": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "Iris3": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "Banknote3": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "ICML/AutoTaxi": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "Adult3_1": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "loan_acquisition": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "Adult3": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "Banknote4": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    },
+    "Iris": {
+        "default": "Skipped by user",
+        "milp_solver_naive": "Skipped by user",
+        "milp_solver_extended_formulation": "Skipped by user",
+        "milp_solver_pb_strengthened": "Skipped by user",
+        "milp_solver_quadratic": "Skipped by user"
+    }
+}

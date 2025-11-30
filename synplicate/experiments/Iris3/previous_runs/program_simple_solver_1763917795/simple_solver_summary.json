@@ -1,0 +1,13 @@
+{
+  "feature": "sepal_length",
+  "accuracy": 0.4376648285782786,
+  "explainability": 1.0,
+  "correct": 10953,
+  "samples": 25026,
+  "cost": 14072.999999999996,
+  "correctnessReward": 10953,
+  "explainibilityReward": 25026,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/program/program_simple_sepal_length.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/program/program_simple_sepal_length.dot",
+  "png": "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/Iris3_program_simple_sepal_length_1763917794.png"
+}

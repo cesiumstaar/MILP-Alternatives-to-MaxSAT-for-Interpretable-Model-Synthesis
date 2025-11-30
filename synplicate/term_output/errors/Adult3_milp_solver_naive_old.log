@@ -1,0 +1,116 @@
+--- Command ---
+python3 synplicate.py experiments/Adult3/ --solver=milp_solver_naive_old
+
+--- Status: SKIPPED by user after 146s ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+age:4:1,
+hours_per_week:4:1,
+workclass:9:1
+experiments/Adult3//
+(3, {'age': 4, 'hours_per_week': 4, 'workclass': 9}, {'age': 1, 'hours_per_week': 1, 'workclass': 1}, {'income': 2}, {'age': <function age at 0x77512c590dc0>, 'hours_per_week': <function hours_per_week at 0x77512c590d30>, 'workclass': <function workclass at 0x77512c590e50>, 'income': <function income at 0x77512c590ee0>}, False)
+Using 26423 samples ...
+--- Found cache file 'experiments/Adult3/sampler_cache_adult_3_features.pkl'. Loading data. ---
+Got 26423 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('age', 39.77046864374), ('hours_per_week', 20.64399880612082), ('workclass', 'Self-emp-not-inc')) -> Label: [('income', '<=50K')]
+Sample 2: Features: (('age', 69.07007917809663), ('hours_per_week', 88.08791539916037), ('workclass', 'Without-pay')) -> Label: [('income', '<=50K')]
+Sample 3: Features: (('age', 22.567939156727718), ('hours_per_week', 86.01483918732042), ('workclass', 'Federal-gov')) -> Label: [('income', '<=50K')]
+Sample 4: Features: (('age', 27), ('hours_per_week', 1), ('workclass', 'Private')) -> Label: [('income', '<=50K')]
+Sample 5: Features: (('age', 25.087590310452004), ('hours_per_week', 52.82333641061556), ('workclass', 'State-gov')) -> Label: [('income', '<=50K')]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 6
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 6
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_naive_old
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 17898 rows, 6188 columns and 41613 nonzeros (Min)
+Model fingerprint: 0x1c1152a0
+Model has 219 linear objective coefficients
+Variable types: 0 continuous, 6188 integer (6188 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [6e+00, 4e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 9813 rows and 4615 columns
+Presolve time: 0.20s
+Presolved: 8085 rows, 1573 columns, 26774 nonzeros
+Variable types: 0 continuous, 1573 integer (1573 binary)
+Found heuristic solution: objective 40209.000000
+
+Root relaxation: objective 3.376233e+04, 1491 iterations, 0.05 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 33762.3333    0  566 40209.0000 33762.3333  16.0%     -    0s
+H    0     0                    40197.000000 39627.0000  1.42%     -    0s
+     0     0 39627.0000    0  874 40197.0000 39627.0000  1.42%     -    0s
+     0     0 39627.0000    0  876 40197.0000 39627.0000  1.42%     -    0s
+     0     0 39627.0000    0  871 40197.0000 39627.0000  1.42%     -    0s
+     0     0 39627.0000    0  865 40197.0000 39627.0000  1.42%     -    1s
+     0     0 39627.0000    0  671 40197.0000 39627.0000  1.42%     -    1s
+     0     0 39627.0000    0  661 40197.0000 39627.0000  1.42%     -    1s
+     0     0 39651.0000    0  909 40197.0000 39651.0000  1.36%     -    2s
+     0     0 39651.0000    0  631 40197.0000 39651.0000  1.36%     -    2s
+     0     0 39675.0000    0  584 40197.0000 39675.0000  1.30%     -    2s
+     0     0 39676.5000    0  870 40197.0000 39676.5000  1.29%     -    2s
+     0     0 39676.5000    0  727 40197.0000 39676.5000  1.29%     -    3s
+     0     0 39699.0000    0  720 40197.0000 39699.0000  1.24%     -    3s
+     0     0 39702.0000    0  871 40197.0000 39702.0000  1.23%     -    3s
+     0     0 39702.0000    0  710 40197.0000 39702.0000  1.23%     -    3s
+     0     0 39711.0000    0  710 40197.0000 39711.0000  1.21%     -    3s
+     0     0 39711.0000    0  669 40197.0000 39711.0000  1.21%     -    4s
+     0     2 39711.0000    0  669 40197.0000 39711.0000  1.21%     -    4s
+    93    75 39728.0000    6  819 40197.0000 39711.0000  1.21%   309    5s
+  3059  1425 39877.0000   15  611 40197.0000 39723.0000  1.18%  95.1   10s
+  3074  1435 40071.0000   15  906 40197.0000 39723.0000  1.18%  94.6   15s
+  3487  1596 40192.0000   35   15 40197.0000 39723.0000  1.18%   119   20s
+  5849  1882 40137.0000   34  393 40197.0000 39753.6667  1.10%   108   25s
+ 11000  3432 40032.5000   25  694 40197.0000 39835.3636  0.90%  92.8   30s
+ 15411  5063 40025.0000   29  597 40197.0000 39861.7500  0.83%  85.2   35s
+ 22553  6878 39992.0000   31  642 40197.0000 39887.0000  0.77%  76.7   40s
+ 29487  8877 40081.6667   31  484 40197.0000 39909.0000  0.72%  72.2   45s
+ 35946 10755 40004.0000   30  608 40197.0000 39921.0000  0.69%  68.7   58s
+ 39045 11304 40191.0000   36  181 40197.0000 39927.0000  0.67%  67.9   60s
+ 46517 13183 39987.0000   30  598 40197.0000 39936.0000  0.65%  65.9   65s
+ 54688 15220 40098.0000   32  185 40197.0000 39947.0000  0.62%  64.2   71s
+ 62043 16724 40194.0000   38  358 40197.0000 39955.0000  0.60%  63.0   75s
+ 70252 17954 40079.0000   33  635 40197.0000 39963.0000  0.58%  61.4   80s
+ 77362 19395 40164.0000   35  355 40197.0000 39969.0000  0.57%  60.5   85s
+ 82177 20378 40099.6667   31  606 40197.0000 39972.0000  0.56%  60.2   90s
+ 89800 21524 40100.0000   33  658 40197.0000 39978.6000  0.54%  59.5   95s
+ 97505 22844     cutoff   38      40197.0000 39984.0000  0.53%  58.9  100s
+ 104966 24290 40128.0000   33  331 40197.0000 39990.0000  0.51%  58.5  105s
+ 112089 25446 40149.0000   36  333 40197.0000 39993.0000  0.51%  58.1  110s
+ 119100 26569 40078.0000   33  609 40197.0000 39996.0000  0.50%  57.7  115s
+ 127857 27772     cutoff   36      40197.0000 39999.8571  0.49%  57.3  120s
+ 135087 28754 40157.0000   35  556 40197.0000 40005.0000  0.48%  56.8  125s
+ 144051 29819 40122.0000   37  466 40197.0000 40008.0000  0.47%  56.5  130s
+ 149981 30729 40186.5000   35  553 40197.0000 40011.0000  0.46%  56.2  135s
+ 159559 31845 40149.0000   31  538 40197.0000 40016.2000  0.45%  55.7  140s
+
+
+--- Standard Error (stderr) ---
+rm: cannot remove 'experiments/Adult3//program': No such file or directory

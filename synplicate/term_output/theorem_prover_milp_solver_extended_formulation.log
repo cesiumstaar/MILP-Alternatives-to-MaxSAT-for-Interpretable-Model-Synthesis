@@ -1,0 +1,103 @@
+--- Command ---
+python3 synplicate.py experiments/theorem_prover/ --solver=milp_solver_extended_formulation
+
+--- Status: SKIPPED by user after 5s ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+F1:4:1,
+F10:3:1
+experiments/theorem_prover//
+(7, {'F1': 4, 'F10': 3}, {'F1': 1, 'F10': 1}, {'H1': 2}, {'F1': <function F1 at 0x72876fa00dc0>, 'F10': <function F10 at 0x72876fa00ee0>, 'H1': <function H1 at 0x72876fa00f70>}, False)
+Using 31268 samples ...
+--- Found cache file 'experiments/theorem_prover/sampler_cache_theorem_prover.pkl'. Loading samples. ---
+
+--- WARNING: All 3731 unique feature combinations have been generated. Cannot generate more. ---
+--- Returning all available samples. ---
+Got 3731 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('F1', 0.41), ('F10', 1.0)) -> Label: [('H1', 1)]
+Sample 2: Features: (('F1', 0.68), ('F10', 1.1)) -> Label: [('H1', 0)]
+Sample 3: Features: (('F1', 0.4), ('F10', 2.8)) -> Label: [('H1', 1)]
+Sample 4: Features: (('F1', 0.12), ('F10', 5.0)) -> Label: [('H1', 1)]
+Sample 5: Features: (('F1', 0.79), ('F10', 2.8)) -> Label: [('H1', 1)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 14
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 14
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_extended_formulation
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 8993 rows, 3124 columns and 20703 nonzeros (Min)
+Model fingerprint: 0x552b22cb
+Model has 39 linear objective coefficients and an objective constant of 5838
+Variable types: 0 continuous, 3124 integer (3124 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 5396 rows and 2444 columns
+Presolve time: 0.11s
+Presolved: 3597 rows, 680 columns, 12060 nonzeros
+Variable types: 0 continuous, 680 integer (680 binary)
+Found heuristic solution: objective 3878.0000000
+
+Root relaxation: objective 2.926000e+03, 603 iterations, 0.01 seconds (0.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2926.00000    0  206 3878.00000 2926.00000  24.5%     -    0s
+H    0     0                    3822.0000000 2926.00000  23.4%     -    0s
+H    0     0                    3808.0000000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  216 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  218 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  204 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  305 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  140 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  125 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  159 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  159 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  157 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  160 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  141 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0   91 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  123 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  116 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  111 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  170 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  169 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  169 3808.00000 3724.00000  2.21%     -    0s
+     0     0 3724.00000    0  118 3808.00000 3724.00000  2.21%     -    0s
+     0     2 3724.00000    0  118 3808.00000 3724.00000  2.21%     -    1s
+
+
+--- Standard Error (stderr) ---
+2025-11-24 16:15:48.827967: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-24 16:15:48.829655: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-24 16:15:48.858844: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-24 16:15:48.858882: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-24 16:15:48.859890: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-24 16:15:48.865560: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-24 16:15:48.865742: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-24 16:15:49.441037: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT

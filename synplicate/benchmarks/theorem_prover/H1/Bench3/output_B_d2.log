@@ -1,0 +1,71 @@
+Processing config.mmc ...
+Processing 3 runs ...
+ + Run 1 
+   + Total 2 iterations
+   + Iteration 0:
+     + YaDT: MissRate 33.8889% of 180, (8 nodes)
+             0.0009459999999999999s (read:0.00085s, tree build:8.4e-05s, tree prune:1.2e-05s)
+   + Iteration 1:
+     + YaDT: MissRate 26.2673% of 217, (4 nodes)
+             0.001274s (read:0.001176s, tree build:9.6e-05s, tree prune:2e-06s)
+ + Run 2 
+   + Total 9 iterations
+   + Iteration 0:
+     + YaDT: MissRate 33.8983% of 177, (4 nodes)
+             0.001072s (read:0.000981s, tree build:7.5e-05s, tree prune:1.6e-05s)
+   + Iteration 1:
+     + YaDT: MissRate 21.8182% of 220, (8 nodes)
+             0.001803s (read:0.001606s, tree build:0.000165s, tree prune:3.2e-05s)
+   + Iteration 2:
+     + YaDT: MissRate 22.4719% of 267, (8 nodes)
+             0.001805s (read:0.001128s, tree build:0.000643s, tree prune:3.4e-05s)
+   + Iteration 3:
+     + YaDT: MissRate 15.4839% of 310, (11 nodes)
+             0.00195s (read:0.001029s, tree build:0.000888s, tree prune:3.3e-05s)
+   + Iteration 4:
+     + YaDT: MissRate 15.9091% of 352, (11 nodes)
+             0.0018579999999999998s (read:0.001101s, tree build:0.000725s, tree prune:3.2e-05s)
+   + Iteration 5:
+     + YaDT: MissRate 15.1134% of 397, (11 nodes)
+             0.002028s (read:0.001139s, tree build:0.00086s, tree prune:2.9e-05s)
+   + Iteration 6:
+     + YaDT: MissRate 14.977% of 434, (11 nodes)
+             0.002049s (read:0.001143s, tree build:0.00088s, tree prune:2.6e-05s)
+   + Iteration 7:
+     + YaDT: MissRate 14.4374% of 471, (14 nodes)
+             0.001728s (read:0.000972s, tree build:0.000743s, tree prune:1.3e-05s)
+   + Iteration 8:
+     + YaDT: MissRate 14.9606% of 508, (14 nodes)
+             0.001587s (read:0.000796s, tree build:0.00076s, tree prune:3.1e-05s)
+ + Run 3 
+   + Total 10 iterations
+   + Iteration 0:
+     + YaDT: MissRate 25% of 180, (8 nodes)
+             0.0011020000000000001s (read:0.000984s, tree build:8.8e-05s, tree prune:3e-05s)
+   + Iteration 1:
+     + YaDT: MissRate 24.3243% of 222, (8 nodes)
+             0.001129s (read:0.001019s, tree build:9.2e-05s, tree prune:1.8e-05s)
+   + Iteration 2:
+     + YaDT: MissRate 12.1212% of 264, (12 nodes)
+             0.0015159999999999998s (read:0.000811s, tree build:0.000681s, tree prune:2.4e-05s)
+   + Iteration 3:
+     + YaDT: MissRate 8.82353% of 306, (11 nodes)
+             0.0017050000000000001s (read:0.000943s, tree build:0.000742s, tree prune:2e-05s)
+   + Iteration 4:
+     + YaDT: MissRate 9.16667% of 360, (11 nodes)
+             0.001747s (read:0.001099s, tree build:0.00063s, tree prune:1.8e-05s)
+   + Iteration 5:
+     + YaDT: MissRate 9.20097% of 413, (11 nodes)
+             0.001636s (read:0.000964s, tree build:0.000654s, tree prune:1.8e-05s)
+   + Iteration 6:
+     + YaDT: MissRate 10% of 450, (11 nodes)
+             0.001734s (read:0.000962s, tree build:0.000754s, tree prune:1.8e-05s)
+   + Iteration 7:
+     + YaDT: MissRate 10.2669% of 487, (11 nodes)
+             0.0014939999999999999s (read:0.000791s, tree build:0.000685s, tree prune:1.8e-05s)
+   + Iteration 8:
+     + YaDT: MissRate 10.4673% of 535, (12 nodes)
+             0.001899s (read:0.001055s, tree build:0.000827s, tree prune:1.7e-05s)
+   + Iteration 9:
+     + YaDT: MissRate 11.0727% of 578, (11 nodes)
+             0.001481s (read:0.000775s, tree build:0.000688s, tree prune:1.8e-05s)

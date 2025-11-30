@@ -1,0 +1,128 @@
+--- Command ---
+python3 synplicate.py experiments/loan_acquisition/ --solver=milp_solver_big_m
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+age:4:1,
+monthly_income:2:1,
+dependents:2:1,
+credit_score:3:1
+experiments/loan_acquisition//
+(4, {'age': 4, 'monthly_income': 2, 'dependents': 2, 'credit_score': 3}, {'age': 1, 'monthly_income': 1, 'dependents': 1, 'credit_score': 1}, {'approved': 2}, {'age': <function age at 0x7de5da30cd30>, 'monthly_income': <function monthly_income at 0x7de5da30ce50>, 'dependents': <function dependents at 0x7de5da30cee0>, 'credit_score': <function credit_score at 0x7de5da30cf70>, 'approved': <function approved at 0x7de5da30d000>}, False)
+Using 30664 samples ...
+--- Found cache file 'experiments/loan_acquisition/sampler_cache_loan.pkl'. Loading samples. ---
+Got 30664 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('age', 29), ('monthly_income', 1993.3), ('dependents', 1), ('credit_score', 678)) -> Label: [('approved', 0)]
+Sample 2: Features: (('age', 29), ('monthly_income', 2034.68), ('dependents', 1), ('credit_score', 486)) -> Label: [('approved', 0)]
+Sample 3: Features: (('age', 44), ('monthly_income', 9789.19), ('dependents', 3), ('credit_score', 852)) -> Label: [('approved', 1)]
+Sample 4: Features: (('age', 34), ('monthly_income', 4854.84), ('dependents', 3), ('credit_score', 643)) -> Label: [('approved', 0)]
+Sample 5: Features: (('age', 40), ('monthly_income', 2670.38), ('dependents', 1), ('credit_score', 347)) -> Label: [('approved', 0)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 8
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 8
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_big_m
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 13087 rows, 4475 columns and 30391 nonzeros (Min)
+Model fingerprint: 0xafe403ab
+Model has 92 linear objective coefficients
+Variable types: 0 continuous, 4475 integer (4475 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+00, 8e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 6714 rows and 3253 columns
+Presolve time: 0.16s
+Presolved: 6373 rows, 1222 columns, 20571 nonzeros
+Variable types: 0 continuous, 1222 integer (1222 binary)
+Found heuristic solution: objective 65449.000000
+
+Root relaxation: objective 5.557917e+04, 1065 iterations, 0.02 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 55579.1667    0  548 65449.0000 55579.1667  15.1%     -    0s
+H    0     0                    65353.000000 55579.1667  15.0%     -    0s
+     0     0 65257.0000    0  440 65353.0000 65257.0000  0.15%     -    0s
+     0     0 65353.0000    0  440 65353.0000 65353.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 5
+  Implied bound: 6
+  Clique: 162
+  MIR: 5
+  Zero half: 46
+  RLT: 62
+  BQP: 11
+
+Explored 1 nodes (3743 simplex iterations) in 0.46 seconds (0.59 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 65353 65449 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.535300000000e+04, best bound 6.535300000000e+04, gap 0.0000%
+Total cost:65353.0
+['age', 'monthly_income', 'dependents', 'credit_score']
+SatSamples :20981
+explainibilityReward: 26831
+correctnessReward: 20981
+experiments/loan_acquisition//
+Extracting program from witness...
+(3,1) -> approved_1
+(3,0) -> approved_0
+(2,1) -> 3
+(2,0) -> approved_0
+(1,1) -> 2
+(1,0) -> approved_0
+(0,3) -> approved_1
+(0,2) -> approved_0
+(0,1) -> approved_0
+(0,0) -> approved_0
+0: age
+Synthesized program: experiments/loan_acquisition//program/program_ms_0_100_0_erm.py
+Visualization: experiments/loan_acquisition//program/program_ms_0_100_0_erm.dot
+Synthesis time:16.178249013988534
+Accuracy:0.6842225410905296 (20981/30664)
+Explainability: 0.875
+Adding region (0,87,0.6842225410905296)
+Adding region (87,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/loan_acquisition//program/program_ms_0_100_0_erm.py', 0.6842225410905296, 0.875)]
+
+
+--- Standard Error (stderr) ---
+2025-11-23 20:41:33.763472: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 20:41:33.765119: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 20:41:33.793743: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 20:41:33.793777: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 20:41:33.794705: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 20:41:33.799557: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 20:41:33.799735: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 20:41:34.323023: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT

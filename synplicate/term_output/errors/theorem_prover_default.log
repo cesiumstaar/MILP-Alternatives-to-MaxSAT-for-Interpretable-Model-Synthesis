@@ -1,0 +1,15 @@
+--- Command ---
+python3 synplicate.py experiments/theorem_prover/ --solver=default
+
+--- Return Code: 1 ---
+
+--- Standard Output (stdout) ---
+
+
+--- Standard Error (stderr) ---
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/synplicate.py", line 12, in <module>
+    from synthesizer.max_sat import ms_synthesizer
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/synthesizer/max_sat/ms_synthesizer.py", line 11, in <module>
+    from pysat.examples.rc2 import RC2Stratified
+ModuleNotFoundError: No module named 'pysat'

@@ -1,0 +1,31 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/
+
+--- Return Code: 1 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing empty cache. ---
+
+
+--- Standard Error (stderr) ---
+2025-11-23 22:34:13.854277: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 22:34:13.855673: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 22:34:13.878758: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 22:34:13.878787: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 22:34:13.879555: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 22:34:13.883628: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 22:34:13.883776: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-23 22:34:14.301802: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 259, in <module>
+    main()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 185, in main
+    samples = load_samples(sampler, sample_limit=args.max_samples)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 82, in load_samples
+    ensure_cache_loaded(sampler_module)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py", line 78, in ensure_cache_loaded
+    load_func()
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/theorem_prover/sampler.py", line 31, in _load_or_initialize_cache
+    with open(_CACHE_FILENAME, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/theorem_prover/sampler_cache_theorem_prover.pkl'

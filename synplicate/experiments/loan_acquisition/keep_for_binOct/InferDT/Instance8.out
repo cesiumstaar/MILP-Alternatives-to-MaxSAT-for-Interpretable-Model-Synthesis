@@ -1,0 +1,11 @@
+Try with k=1
+Try with k=2
+Try with k=3
+Try with k=4
+
+
+
+===== RESULT =====
+Depth: 4
+Number of nodes: 17
+Accuracy: 97.6623 %

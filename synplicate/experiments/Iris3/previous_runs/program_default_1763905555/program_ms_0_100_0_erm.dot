@@ -1,0 +1,20 @@
+digraph {
+node [label=species_0,style=""] species_0
+node [label=species_0,style=""] species_0
+node [label=species_1,style=""] species_1
+node [label=species_1,style=""] species_1
+node [label=species_2,style=""] species_2
+node [label=species_2,style=""] species_2
+node [label=species_0,style=""] species_0
+node [label=sepal_length,shape="diamond",style=""] 2
+node [label=petal_length,shape="diamond",style=""] 0
+
+2 -> species_0 [label="3"]
+2 -> species_0 [label="2"]
+2 -> species_1 [label="1"]
+2 -> species_1 [label="0"]
+0 -> species_2 [label="3"]
+0 -> species_2 [label="2"]
+0 -> 2 [label="1"]
+0 -> species_0 [label="0"]
+}

@@ -1,0 +1,37 @@
+Processing config.mmc ...
+Processing 5 runs ...
+ + Run 1 
+   + Total 1 iterations
+   + Iteration 0:
+     + YaDT: 1 decision node(s)
+             Train MissRate: 5% of 20
+             Test MissRate : 6% of 500
+             0.00124s (read:0.001169s, tree build:5.9e-05s, tree prune:1.2e-05s)
+ + Run 2 
+   + Total 1 iterations
+   + Iteration 0:
+     + YaDT: 0 decision node(s)
+             Train MissRate: 5% of 20
+             Test MissRate : 5% of 500
+             0.007034s (read:0.006969s, tree build:6.4e-05s, tree prune:1e-06s)
+ + Run 3 
+   + Total 1 iterations
+   + Iteration 0:
+     + YaDT: 2 decision node(s)
+             Train MissRate: 0% of 20
+             Test MissRate : 8.2% of 500
+             0.004815s (read:0.004726s, tree build:7.1e-05s, tree prune:1.8e-05s)
+ + Run 4 
+   + Total 1 iterations
+   + Iteration 0:
+     + YaDT: 0 decision node(s)
+             Train MissRate: 5% of 20
+             Test MissRate : 5% of 500
+             0.001181s (read:0.001124s, tree build:5.5e-05s, tree prune:2e-06s)
+ + Run 5 
+   + Total 1 iterations
+   + Iteration 0:
+     + YaDT: 0 decision node(s)
+             Train MissRate: 5% of 20
+             Test MissRate : 5.03018% of 497
+             0.000919s (read:0.00085s, tree build:6.7e-05s, tree prune:2e-06s)

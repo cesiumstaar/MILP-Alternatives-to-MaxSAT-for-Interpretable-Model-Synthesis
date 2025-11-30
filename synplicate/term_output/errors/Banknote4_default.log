@@ -1,0 +1,9 @@
+--- Command ---
+python3 synplicate.py experiments/Banknote4/ --solver=default
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+
+
+--- Standard Error (stderr) ---

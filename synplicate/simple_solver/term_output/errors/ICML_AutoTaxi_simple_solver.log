@@ -1,0 +1,13 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/ICML/AutoTaxi/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+
+FATAL ERROR: Source CSV file not found at 'experiments/ICML/AutoTaxi/data.csv'.
+
+No samples available for evaluation.
+
+
+--- Standard Error (stderr) ---

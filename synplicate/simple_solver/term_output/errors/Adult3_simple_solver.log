@@ -1,0 +1,13 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- No cache file found. Initializing model and real samples. ---
+
+FATAL ERROR: Data file not found at 'experiments/Adult3/adult.data'. Please ensure path is correct.
+
+
+
+--- Standard Error (stderr) ---

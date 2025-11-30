@@ -1,0 +1,18 @@
+digraph {
+node [label=approved_1,style=""] approved_1
+node [label=approved_0,style=""] approved_0
+node [label=approved_1,style=""] approved_1
+node [label=approved_0,style=""] approved_0
+node [label=monthly_income,shape="diamond",style=""] 2
+node [label=age,shape="diamond",style=""] 1
+node [label=dependents,shape="diamond",style=""] 0
+
+2 -> approved_1 [label="1"]
+2 -> approved_0 [label="0"]
+1 -> approved_1 [label="3"]
+1 -> 2 [label="2"]
+1 -> 2 [label="1"]
+1 -> approved_0 [label="0"]
+0 -> 1 [label="1"]
+0 -> 1 [label="0"]
+}

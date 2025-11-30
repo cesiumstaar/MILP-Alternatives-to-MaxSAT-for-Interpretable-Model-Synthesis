@@ -1,0 +1,32 @@
+--- Command ---
+python3 synplicate.py experiments/california_census/ --solver=milp_solver_naive_old
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+population:4:1,
+median_income:2:1
+experiments/california_census//
+(3, {'population': 4, 'median_income': 2}, {'population': 1, 'median_income': 1}, {'Class': 4}, {'population': <function population at 0x7abc59b8cd30>, 'median_income': <function median_income at 0x7abc59b8ce50>, 'Class': <function Class at 0x7abc59b8cee0>}, False)
+
+
+--- Standard Error (stderr) ---
+2025-11-23 19:29:40.576027: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-23 19:29:40.577411: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 19:29:40.600512: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-11-23 19:29:40.600548: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-11-23 19:29:40.601346: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-11-23 19:29:40.605701: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-23 19:29:40.605847: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/synplicate.py", line 76, in <module>
+    samples, Gamma = erm.execute(synthesis_benchmark_path,synthesizer,confidence,error_margin,"ms", solver=solver)
+  File "/home/lenin31/Desktop/repos/F1ML/synplicate/methods/erm/erm_procedure.py", line 21, in execute
+    sampler = importlib.import_module(f".sampler",benchmark_path.replace("/",".").rstrip('.'))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load

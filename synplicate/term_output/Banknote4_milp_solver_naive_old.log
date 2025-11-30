@@ -1,0 +1,129 @@
+--- Command ---
+python3 synplicate.py experiments/Banknote4/ --solver=milp_solver_naive_old
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+variance:4:1,
+skewness:4:1,
+curtosis:4:1,
+entropy:4:1
+experiments/Banknote4//
+(4, {'variance': 4, 'skewness': 4, 'curtosis': 4, 'entropy': 4}, {'variance': 1, 'skewness': 1, 'curtosis': 1, 'entropy': 1}, {'class': 2}, {'variance': <function variance at 0x71dd66114d30>, 'skewness': <function skewness at 0x71dd66114e50>, 'curtosis': <function curtosis at 0x71dd66114ee0>, 'entropy': <function entropy at 0x71dd66114f70>, 'class': <function CLASS at 0x71dd66115000>}, False)
+Using 30664 samples ...
+--- Found cache file 'experiments/Banknote4/sampler_cache_banknote_4_features.pkl'. Loading data. ---
+Got 30664 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('variance', -4.753203873352485), ('skewness', 0.6340907173843178), ('curtosis', 2.351042287693258), ('entropy', -1.009130344951699)) -> Label: [('class', 1)]
+Sample 2: Features: (('variance', 0.2050844948256385), ('skewness', 11.698868965694928), ('curtosis', 17.41934854212977), ('entropy', -1.6228294016044842)) -> Label: [('class', 0)]
+Sample 3: Features: (('variance', -6.089208336478336), ('skewness', -8.4364316360717), ('curtosis', 9.34027135221638), ('entropy', -6.098739366553585)) -> Label: [('class', 1)]
+Sample 4: Features: (('variance', -2.65164992870704), ('skewness', -4.001923810785323), ('curtosis', 16.701061347612008), ('entropy', -5.174378070115424)) -> Label: [('class', 0)]
+Sample 5: Features: (('variance', -5.76855516584836), ('skewness', -11.732169808543755), ('curtosis', -1.4507795808251163), ('entropy', -0.1168524675193865)) -> Label: [('class', 1)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 8
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 8
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_naive_old
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 67424 rows, 22806 columns and 157086 nonzeros (Min)
+Model fingerprint: 0xcd343c25
+Model has 414 linear objective coefficients
+Variable types: 0 continuous, 22806 integer (22806 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+00, 8e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 31569 rows and 16113 columns
+Presolve time: 1.05s
+Presolved: 35855 rows, 6693 columns, 115743 nonzeros
+Variable types: 0 continuous, 6693 integer (6693 binary)
+Found heuristic solution: objective 78212.000000
+Found heuristic solution: objective 70458.000000
+Root relaxation presolved: 35848 rows, 6700 columns, 115722 nonzeros
+
+
+Root relaxation: objective 5.621800e+04, 5296 iterations, 0.37 seconds (0.55 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 56218.0000    0 2273 70458.0000 56218.0000  20.2%     -    2s
+H    0     0                    66345.000000 56218.0000  15.3%     -    2s
+     0     0 65325.0000    0 2663 66345.0000 65325.0000  1.54%     -    7s
+     0     0 65337.0000    0 2530 66345.0000 65337.0000  1.52%     -    7s
+
+Cutting planes:
+  Gomory: 3
+  Cover: 6
+  Clique: 263
+  MIR: 27
+  Zero half: 493
+  RLT: 304
+  Relax-and-lift: 2
+  BQP: 21
+
+Explored 1 nodes (19794 simplex iterations) in 8.49 seconds (7.56 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 66345 70458 78212 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.634500000000e+04, best bound 6.634500000000e+04, gap 0.0000%
+Total cost:66345.0
+['variance', 'skewness', 'curtosis', 'entropy']
+SatSamples :24164
+explainibilityReward: 26831
+correctnessReward: 24164
+experiments/Banknote4//
+Extracting program from witness...
+(3,3) -> class_0
+(3,2) -> class_0
+(3,1) -> class_0
+(3,0) -> class_1
+(2,3) -> class_0
+(2,2) -> class_0
+(2,1) -> 3
+(2,0) -> 3
+(1,3) -> class_0
+(1,2) -> class_0
+(1,1) -> class_1
+(1,0) -> 3
+(0,3) -> class_0
+(0,2) -> class_0
+(0,1) -> class_1
+(0,0) -> class_1
+0: variance
+Synthesized program: experiments/Banknote4//program/program_ms_0_100_0_erm.py
+Visualization: experiments/Banknote4//program/program_ms_0_100_0_erm.dot
+Synthesis time:62.27496700800839
+Accuracy:0.7880250456561441 (24164/30664)
+Explainability: 0.875
+Adding region (0,87,0.7880250456561441)
+Adding region (87,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/Banknote4//program/program_ms_0_100_0_erm.py', 0.7880250456561441, 0.875)]
+
+
+--- Standard Error (stderr) ---

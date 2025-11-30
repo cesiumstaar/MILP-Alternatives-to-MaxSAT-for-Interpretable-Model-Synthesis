@@ -1,0 +1,5 @@
+c Using random seed 0, runIndex 0
+c Parsing formula...
+c Formula has 40 maximization and 1441 counting variables
+c Generating 20 independent samples from 1-fold self-composition
+c Sampling with tolerance (1+16.002195)... completed in 156 s

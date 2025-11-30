@@ -1,0 +1,21 @@
+YaDT version 2.2.0 (c) S. Ruggieri 2002-2019
+
+MAJORITY CLASS value: 0 (2 classes)
+MAJORITY MISCLASSIFICATION on training: 47.619% of 84 cases. 
+
+MISCLASSIFICATION on training: 22.619% of 84 cases. 
+?	0	1	predicted(cols)/actual(rows)
+0	0	0	?
+0	25	19	0
+0	0	40	1
+
+MISCLASSIFICATION on test file: 25.7396% of 338 cases. 
+?	0	1	predicted(cols)/actual(rows)
+0	0	0	?
+0	118	86	0
+0	1	133	1
+
+DECISION TREE (size=3)
+
+F1 <= 0.100000 : 0 (25.0/1.3)
+F1 > 0.100000 : 1 (59.0/22.1)

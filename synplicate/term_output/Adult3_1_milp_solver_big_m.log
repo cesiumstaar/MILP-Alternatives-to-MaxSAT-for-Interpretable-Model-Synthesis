@@ -1,0 +1,118 @@
+--- Command ---
+python3 synplicate.py experiments/Adult3_1/ --solver=milp_solver_big_m
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+age:4:1,
+hours_per_week:4:1,
+workclass:6:1
+experiments/Adult3_1//
+(3, {'age': 4, 'hours_per_week': 4, 'workclass': 6}, {'age': 1, 'hours_per_week': 1, 'workclass': 1}, {'income': 2}, {'age': <function age at 0x79f6e750ce50>, 'hours_per_week': <function hours_per_week at 0x79f6e750cee0>, 'workclass': <function workclass at 0x79f6e750cf70>, 'income': <function income at 0x79f6e750d000>}, False)
+Using 25522 samples ...
+--- Found cache file 'experiments/Adult3_1/sampler_cache_adult_3_features.pkl'. Loading data. ---
+Got 25522 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('age', 42.27700745714928), ('hours_per_week', 29.984340326635238), ('workclass', 'Self-emp-not-inc')) -> Label: [('income', '<=50K')]
+Sample 2: Features: (('age', 71.23306519357388), ('hours_per_week', 89.20535980663348), ('workclass', 'Self-emp-inc')) -> Label: [('income', '>50K')]
+Sample 3: Features: (('age', 79.73572161841108), ('hours_per_week', 53.343079577250414), ('workclass', 'Self-emp-inc')) -> Label: [('income', '<=50K')]
+Sample 4: Features: (('age', 66.38859682353433), ('hours_per_week', 71.2945507113513), ('workclass', 'Government')) -> Label: [('income', '>50K')]
+Sample 5: Features: (('age', 24.488418023473187), ('hours_per_week', 46.42697339945376), ('workclass', 'Unemployed')) -> Label: [('income', '<=50K')]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 6
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 6
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_big_m
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 9277 rows, 3231 columns and 21539 nonzeros (Min)
+Model fingerprint: 0xd9f6d691
+Model has 130 linear objective coefficients
+Variable types: 0 continuous, 3231 integer (3231 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [6e+00, 9e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 5396 rows and 2455 columns
+Presolve time: 0.13s
+Presolved: 3881 rows, 776 columns, 12705 nonzeros
+Variable types: 0 continuous, 776 integer (776 binary)
+Found heuristic solution: objective 42951.000000
+
+Root relaxation: objective 3.972233e+04, 634 iterations, 0.01 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 39722.3333    0  206 42951.0000 39722.3333  7.52%     -    0s
+H    0     0                    42873.000000 39722.3333  7.35%     -    0s
+H    0     0                    42855.000000 39722.3333  7.31%     -    0s
+
+Cutting planes:
+  Implied bound: 20
+  MIR: 1
+  Zero half: 25
+  RLT: 105
+
+Explored 1 nodes (927 simplex iterations) in 0.24 seconds (0.32 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 42855 42873 42951 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.285500000000e+04, best bound 4.285500000000e+04, gap 0.0000%
+Total cost:42855.0
+['age', 'hours_per_week', 'workclass']
+SatSamples :11258
+explainibilityReward: 21267
+correctnessReward: 11258
+experiments/Adult3_1//
+Extracting program from witness...
+(2,3) -> income_0
+(2,2) -> income_0
+(2,1) -> income_1
+(2,0) -> income_1
+(1,5) -> income_1
+(1,4) -> income_1
+(1,3) -> income_1
+(1,2) -> income_0
+(1,1) -> income_0
+(1,0) -> income_0
+(0,3) -> income_1
+(0,2) -> income_0
+(0,1) -> income_1
+(0,0) -> income_0
+0: age
+Synthesized program: experiments/Adult3_1//program/program_ms_0_100_0_erm.py
+Visualization: experiments/Adult3_1//program/program_ms_0_100_0_erm.dot
+Synthesis time:9.692602560011437
+Accuracy:0.44110963090666877 (11258/25522)
+Explainability: 0.8332810908236031
+Adding region (0,83,0.44110963090666877)
+Adding region (83,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/Adult3_1//program/program_ms_0_100_0_erm.py', 0.44110963090666877, 0.8332810908236031)]
+
+
+--- Standard Error (stderr) ---

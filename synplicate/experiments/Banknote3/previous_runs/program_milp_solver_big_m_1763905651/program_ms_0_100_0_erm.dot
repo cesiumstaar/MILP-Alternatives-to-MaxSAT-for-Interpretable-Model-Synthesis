@@ -1,0 +1,27 @@
+digraph {
+node [label=class_0,style=""] class_0
+node [label=class_1,style=""] class_1
+node [label=class_1,style=""] class_1
+node [label=class_1,style=""] class_1
+node [label=class_1,style=""] class_1
+node [label=class_1,style=""] class_1
+node [label=class_1,style=""] class_1
+node [label=class_0,style=""] class_0
+node [label=class_0,style=""] class_0
+node [label=curtosis,shape="diamond",style=""] 2
+node [label=skewness,shape="diamond",style=""] 1
+node [label=variance,shape="diamond",style=""] 0
+
+2 -> class_0 [label="3"]
+2 -> class_1 [label="2"]
+2 -> class_1 [label="1"]
+2 -> class_1 [label="0"]
+1 -> class_1 [label="3"]
+1 -> 2 [label="2"]
+1 -> class_1 [label="1"]
+1 -> class_1 [label="0"]
+0 -> class_0 [label="3"]
+0 -> class_0 [label="2"]
+0 -> 2 [label="1"]
+0 -> 1 [label="0"]
+}

@@ -1,0 +1,10 @@
+--- Command ---
+python3 synplicate.py experiments/Iris/ --solver=milp_solver_naive_old
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+
+
+--- Standard Error (stderr) ---
+rm: cannot remove 'experiments/Iris//maxsat_encoding/': No such file or directory

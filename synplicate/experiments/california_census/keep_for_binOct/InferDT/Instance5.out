@@ -1,0 +1,32 @@
+Try with k=1
+Try with k=2
+Try with k=3
+Try with k=4
+
+
+
+===== RESULT =====
+Depth: 4
+Number of nodes: 21
+Accuracy: 90.1299 %
+median_income>6.00858
+| population>30016
+| | median_income>11.1478: 1
+| | !median_income>11.1478: 0
+| !population>30016
+| | median_income>7.23593
+| | | population>4623: 1
+| | | !population>4623: 3
+| | !median_income>7.23593
+| | | median_income>6.96129: 0
+| | | !median_income>6.96129: 1
+!median_income>6.00858
+| population>6218
+| | median_income>3.48992
+| | | population>19343: 0
+| | | !population>19343: 1
+| | !median_income>3.48992: 1
+| !population>6218
+| | population>5629: 0
+| | !population>5629: 3
+

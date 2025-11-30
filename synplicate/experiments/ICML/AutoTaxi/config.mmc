@@ -1,0 +1,5 @@
+size =  3
+features = clouds:6, day_time:4, init_pos:4
+labels = alert:2
+extend = false 
+feature_defs = feature_defs

@@ -1,0 +1,25 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- Found cache file 'experiments/Adult3/sampler_cache_adult_3_features.pkl'. Loading data. ---
+Warning: graphviz 'dot' command not found or failed; PNG not generated.
+Explored 3 features to find a single-node classifier.
+Best feature: age
+Synthesized program: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/program/program_simple_age.py
+Visualization: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/program/program_simple_age.dot
+Synthesis time:0.7503554821014404
+Accuracy:0.745827498770011 (19707/26423)
+Explainability: 1.0
+Total cost:6716.000000000003
+correctnessReward: 19707
+explainibilityReward: 26423
+
+
+--- Standard Error (stderr) ---
+Error: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Adult3/program/program_simple_age.dot: syntax error in line 13 scanning a HTML string (missing '>'? bad nesting? longer than 16384?)
+String starting:<=50K,style=""] income_<=50K
+0 -> income_<=50K [label="1"]
+node [label=income_<=5

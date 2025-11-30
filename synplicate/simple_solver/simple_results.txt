@@ -1,0 +1,31 @@
+--- Simple Solver Experiment Runner (Linear View) ---
+
+Experiment: Adult3
+  - simple_solver: time=0.74s, cost=6716, acc=0.75, exp=1.00, corR=19707, expR=26423
+
+Experiment: Adult3_1
+  - simple_solver: time=0.73s, cost=6814, acc=0.73, exp=1.00, corR=18708, expR=25522
+
+Experiment: Banknote3
+  - simple_solver: time=0.59s, cost=5131, acc=0.79, exp=1.00, corR=19490, expR=24621
+
+Experiment: Banknote4
+  - simple_solver: time=0.60s, cost=6500, acc=0.79, exp=1.00, corR=24164, expR=30664
+
+Experiment: ICML/AutoTaxi
+  - simple_solver: time=0.65s, cost=8, acc=0.92, exp=1.00, corR=92, expR=100
+
+Experiment: Iris
+  - simple_solver: time=0.64s, cost=8386, acc=0.73, exp=1.00, corR=22620, expR=31006
+
+Experiment: Iris3
+  - simple_solver: time=0.58s, cost=14072, acc=0.44, exp=1.00, corR=10953, expR=25026
+
+Experiment: california_census
+  - simple_solver: time=1.20s, cost=18, acc=0.82, exp=1.00, corR=82, expR=100
+
+Experiment: loan_acquisition
+  - simple_solver: time=1.26s, cost=10, acc=0.89, exp=1.00, corR=89, expR=100
+
+Experiment: theorem_prover
+  - simple_solver: time=1.19s, cost=12, acc=0.88, exp=1.00, corR=88, expR=100 

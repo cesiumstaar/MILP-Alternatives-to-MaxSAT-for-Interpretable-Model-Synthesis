@@ -1,0 +1,9 @@
+--- Command ---
+python3 synplicate.py experiments/ICML/AutoTaxi/ --solver=solver_big_m_lp
+
+--- Status: SKIPPED by user after 0s ---
+
+--- Standard Output (stdout) ---
+
+
+--- Standard Error (stderr) ---

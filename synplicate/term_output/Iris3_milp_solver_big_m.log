@@ -1,0 +1,123 @@
+--- Command ---
+python3 synplicate.py experiments/Iris3/ --solver=milp_solver_big_m
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+Executing PAC procedure for ((0.05, 0.03))...
+Extracting synthesis configuration... 
+sepal_length:4:2,
+petal_length:4:1,
+petal_width:4:1
+experiments/Iris3//
+(3, {'sepal_length': 4, 'petal_length': 4, 'petal_width': 4}, {'sepal_length': 2, 'petal_length': 1, 'petal_width': 1}, {'species': 3}, {'sepal_length': <function sepal_length at 0x7f5456d9cc10>, 'petal_length': <function petal_length at 0x7f5456d9cdc0>, 'petal_width': <function petal_width at 0x7f5456d9cd30>, 'species': <function species at 0x7f5456d9ce50>}, False)
+Using 25026 samples ...
+--- Found cache file 'experiments/Iris3/sampler_cache.pkl'. Loading data. ---
+Got 25026 samples ...
+--- Head of Samples (first 5) ---
+Sample 1: Features: (('sepal_length', 6.361645311714959), ('petal_length', 1.3873865649333266), ('petal_width', 1.8722201205823634)) -> Label: [('species', 0)]
+Sample 2: Features: (('sepal_length', 7.071741605160623), ('petal_length', 2.6439537450331736), ('petal_width', 0.9974003940684475)) -> Label: [('species', 1)]
+Sample 3: Features: (('sepal_length', 4.952873476898767), ('petal_length', 2.976819626579566), ('petal_width', 2.229333763968508)) -> Label: [('species', 1)]
+Sample 4: Features: (('sepal_length', 6.535650840365798), ('petal_length', 5.505202649646944), ('petal_width', 1.0631086802850076)) -> Label: [('species', 2)]
+Sample 5: Features: (('sepal_length', 7.058231714290477), ('petal_length', 6.137614457380413), ('petal_width', 1.9828005214751774)) -> Label: [('species', 2)]
+---------------------------------
+=================================
+ Exploring solution in region [0,100,0]
+=================================
+|---Estimated maximum explanation score: 9
+Translating to dimacs...
+Translating to wcnfdimacs...
+|---Extracting soft variables...
+|---Estimated maximum explanation score: 9
+|---Extracting threshold variables...
+|---Writing WCNF File...
+Using MILP solver: milp_solver_big_m
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2713262
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Set parameter OutputFlag to value 1
+Max Sat...
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Zorin OS 17.3")
+
+CPU model: 12th Gen Intel(R) Core(TM) i5-12450H, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2713262 - for non-commercial use only - registered to hi___@iitb.ac.in
+Optimize a model with 9945 rows, 3439 columns and 23120 nonzeros (Min)
+Model fingerprint: 0xecfdc940
+Model has 111 linear objective coefficients
+Variable types: 0 continuous, 3439 integer (3439 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [9e+00, 8e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 5697 rows and 2639 columns
+Presolve time: 0.12s
+Presolved: 4248 rows, 800 columns, 14620 nonzeros
+Variable types: 0 continuous, 800 integer (800 binary)
+Found heuristic solution: objective 39528.000000
+Found heuristic solution: objective 39501.000000
+Found heuristic solution: objective 36747.000000
+
+Root relaxation: objective 3.439633e+04, 942 iterations, 0.03 seconds (0.07 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 34396.3333    0  580 36747.0000 34396.3333  6.40%     -    0s
+     0     0 36459.0000    0  286 36747.0000 36459.0000  0.78%     -    0s
+H    0     0                    36684.000000 36459.0000  0.61%     -    0s
+     0     0 36663.0000    0  219 36684.0000 36663.0000  0.06%     -    0s
+     0     0     cutoff    0      36684.0000 36684.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 14
+  Implied bound: 21
+  Clique: 49
+  MIR: 3
+  Zero half: 195
+  RLT: 21
+  BQP: 3
+
+Explored 1 nodes (1681 simplex iterations) in 0.28 seconds (0.41 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 36684 36747 39501 39528 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.668400000000e+04, best bound 3.668400000000e+04, gap 0.0000%
+Total cost:36684.0
+['sepal_length', 'petal_length', 'petal_width']
+SatSamples :10467
+explainibilityReward: 22245
+correctnessReward: 10467
+experiments/Iris3//
+Extracting program from witness...
+(2,3) -> species_0
+(2,2) -> species_0
+(2,1) -> species_2
+(2,0) -> species_1
+(1,3) -> 2
+(1,2) -> 2
+(1,1) -> 2
+(1,0) -> 2
+(0,3) -> species_2
+(0,2) -> species_2
+(0,1) -> species_2
+(0,0) -> species_2
+0: sepal_length
+Synthesized program: experiments/Iris3//program/program_ms_0_100_0_erm.py
+Visualization: experiments/Iris3//program/program_ms_0_100_0_erm.dot
+Synthesis time:10.173464805004187
+Accuracy:0.41824502517381923 (10467/25026)
+Explainability: 0.8888755694078159
+Adding region (0,88,0.41824502517381923)
+Adding region (88,100,0)
+=================================
+Pareto-optimal solutions: 
+ [('experiments/Iris3//program/program_ms_0_100_0_erm.py', 0.41824502517381923, 0.8888755694078159)]
+
+
+--- Standard Error (stderr) ---

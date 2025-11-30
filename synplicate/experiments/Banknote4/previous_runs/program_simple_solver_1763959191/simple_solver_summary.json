@@ -1,0 +1,13 @@
+{
+  "feature": "variance",
+  "accuracy": 0.7880250456561441,
+  "explainability": 1.0,
+  "correct": 24164,
+  "samples": 30664,
+  "cost": 6500.000000000002,
+  "correctnessReward": 24164,
+  "explainibilityReward": 30664,
+  "program": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Banknote4/program/program_simple_variance.py",
+  "dot": "/home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Banknote4/program/program_simple_variance.dot",
+  "png": "/home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/Banknote4_program_simple_variance_1763959190.png"
+}

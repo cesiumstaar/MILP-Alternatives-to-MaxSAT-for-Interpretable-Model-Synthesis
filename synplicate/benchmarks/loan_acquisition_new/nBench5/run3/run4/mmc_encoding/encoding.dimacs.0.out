@@ -1,0 +1,45 @@
+c CryptoMiniSat version 5.0.0
+c CryptoMiniSat SHA revision GIT-notfound
+c CryptoMiniSat compilation env CMAKE_CXX_COMPILER = /usr/bin/c++ | CMAKE_CXX_FLAGS =  -fno-stack-protector -std=c++11 -g -pthread -Wall -Wextra -Wunused -pedantic -Wsign-compare -Wtype-limits -Wuninitialized -Wno-deprecated -Wstrict-aliasing -Wpointer-arith -fvisibility=hidden -Wpointer-arith -Wformat-nonliteral -Winit-self -Wparentheses -Wunreachable-code -ggdb3 -fPIC | COMPILE_DEFINES =  -DUSE_GAUSS -DNDEBUG -D_FORTIFY_SOURCE=0 -DUSE_PTHREADS | STATICCOMPILE = ON | ONLY_SIMPLE = OFF | Boost_FOUND = 1 | TBB_FOUND =  | STATS = OFF | MYSQL_FOUND =  | SQLITE3_FOUND =  | ZLIB_FOUND =  | VALGRIND_FOUND = FALSE | ENABLE_TESTING = OFF | M4RI_FOUND =  | SLOW_DEBUG = OFF | ENABLE_ASSERTIONS = OFF | PYTHON_EXECUTABLE = /usr/bin/python2.7 | PYTHON_LIBRARY = /usr/lib/x86_64-linux-gnu/libpython2.7.so | PYTHON_INCLUDE_DIRS = /usr/include/python2.7 | MY_TARGETS =  | compilation date time = Apr 18 2018 15:25:48
+c compiled with gcc version 5.4.0 20160609
+Using ApproxMC to compute startIteration for UniGen
+WARNING: manually-specified pivotAC and/or tApproxMC may not be large enough to guarantee correctness of UniGen.
+Omit those arguments to use safe default values.
+ApproxMC starting from iteration 0
+BoundedSATCount looking for 74 solutions
+Num Explored: 1 ind set size: 87
+Number of XOR hashes active: 1
+BoundedSATCount looking for 74 solutions
+Num Explored: 1 ind set size: 87
+Number of XOR hashes active: 2
+BoundedSATCount looking for 74 solutions
+Num Explored: 2 ind set size: 87
+Number of XOR hashes active: 4
+BoundedSATCount looking for 74 solutions
+Num Explored: 4 ind set size: 87
+Number of XOR hashes active: 8
+BoundedSATCount looking for 74 solutions
+Num Explored: 8 ind set size: 87
+Number of XOR hashes active: 16
+BoundedSATCount looking for 74 solutions
+Num Explored: 16 ind set size: 87
+Number of XOR hashes active: 32
+BoundedSATCount looking for 74 solutions
+Num Explored: 55 ind set size: 87
+Number of XOR hashes active: 24
+BoundedSATCount looking for 74 solutions
+Num Explored: 79 ind set size: 87
+Number of XOR hashes active: 20
+BoundedSATCount looking for 74 solutions
+Num Explored: 83 ind set size: 87
+Number of XOR hashes active: 18
+BoundedSATCount looking for 74 solutions
+Num Explored: 85 ind set size: 87
+Number of XOR hashes active: 17
+BoundedSATCount looking for 74 solutions
+ApproxMC finished in 3.25368 s
+loThresh 13, hiThresh 71, startIteration 17
+Outputting 1 solutions from each UniGen2 call
+Making 5 loops. calls per loop: 4 remaining: 0
+Total time for UniGen2: 13.586 s
+Samples generated: 20

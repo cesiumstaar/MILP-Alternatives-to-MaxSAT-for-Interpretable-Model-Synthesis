@@ -1,0 +1,20 @@
+Instance  UserTime(s)	Accuracy
+Depth 5
+Instance1    0.70	0.787  	
+Instance2    0.70	0.9192
+Instance3    0.68	0.8623
+Instance4    0.71	0.9444
+Instance5    0.67	0.9195
+Instance6    0.83	0.9424
+Instance7    0.64	0.9351
+Instance8    0.67	0.9299
+
+Depth 3
+Instance1   0.66 	0.787
+Instance2   0.72  	0.9192
+Instance3   0.68  	0.8623
+Instance4   0.70     	0.9444
+Instance5   0.69     	0.9195
+Instance6   0.69     	0.9424
+Instance7   0.70     	0.9351
+Instance8   0.66     	0.9299

@@ -1,0 +1,12 @@
+digraph {
+node [label=income_0,style=""] income_0
+node [label=income_0,style=""] income_0
+node [label=income_0,style=""] income_0
+node [label=income_0,style=""] income_0
+node [label=age,shape="diamond",style=""] 0
+
+0 -> income_0 [label="3"]
+0 -> income_0 [label="2"]
+0 -> income_0 [label="1"]
+0 -> income_0 [label="0"]
+}

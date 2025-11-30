@@ -1,0 +1,16 @@
+Try with k=1
+Try with k=2
+
+
+
+===== RESULT =====
+Depth: 2
+Number of nodes: 7
+Accuracy: 72.987 %
+median_income>4.08494
+| population>1869: 1
+| !population>1869: 3
+!median_income>4.08494
+| median_income>3.90019: 0
+| !median_income>3.90019: 1
+

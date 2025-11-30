@@ -1,0 +1,3 @@
+age,string,discrete
+monthly_income,string,discrete
+approved,string,class

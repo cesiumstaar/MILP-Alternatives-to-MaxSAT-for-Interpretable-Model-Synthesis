@@ -1,0 +1,21 @@
+--- Command ---
+python3 /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/simple_solver.py /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/
+
+--- Return Code: 0 ---
+
+--- Standard Output (stdout) ---
+--- Found cache file 'experiments/Iris3/sampler_cache.pkl'. Loading data. ---
+Explored 3 features to find a single-node classifier.
+Best feature: sepal_length
+Synthesized program: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/program/program_simple_sepal_length.py
+Visualization: /home/lenin31/Desktop/repos/F1ML/synplicate/experiments/Iris3/program/program_simple_sepal_length.dot
+Image stored at: /home/lenin31/Desktop/repos/F1ML/synplicate/simple_solver/images/Iris3_program_simple_sepal_length_1763917794.png
+Synthesis time:0.5789031982421875
+Accuracy:0.4376648285782786 (10953/25026)
+Explainability: 1.0
+Total cost:14072.999999999996
+correctnessReward: 10953
+explainibilityReward: 25026
+
+
+--- Standard Error (stderr) ---
